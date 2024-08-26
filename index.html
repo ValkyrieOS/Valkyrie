@@ -1,130 +1,150 @@
 <!DOCTYPE html>
-<html lang="es">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Valkyrie - Comunidad en línea</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-  <header>
-    <nav>
-      <div class="nav-logo">Valkyrie</div>
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#actividades">Actividades</a></li>
-        <li><a href="#conoce-gente">Conoce gente</a></li>
-        <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-      </ul>
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </nav>
-  </header>
-
-  <main>
-    <section id="inicio" class="section hero">
-      <h1>Bienvenido a Valkyrie v1.1</h1>
-      <p class="hero-subtitle">
-        Una comunidad en línea vibrante para conocer gente y disfrutar de
-        actividades emocionantes
-      </p>
-      <a href="https://discord.gg/hkMj7Vbe4H" class="cta-button">
-        <i class="fab fa-discord"></i> Únete a nuestro Discord
-      </a>
-    </section>
-
-    <section id="actividades" class="section">
-      <h2>Explora nuestras actividades</h2>
-      <div class="activity-grid">
-        <div class="activity-card">
-          <i class="fas fa-users"></i>
-          <h3>Eventos sociales</h3>
-          <p>
-            Conoce a gente de todo el mundo en nuestros eventos temáticos
-            semanales.
+<html lang="es" class="bg-gray-900">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valkyrie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+          animation-delay: 0.2s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-out;
+          animation-duration: 0.5s;
+          animation-iteration-count: 1;
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+          animation-delay: 0.2s;
+        }
+      }
+      .animate-fadeInUp {
+        animation: fadeInUp 0.5s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white"
+  >
+    <div class="relative z-10">
+      <header class="p-6 flex justify-between items-center">
+        <h1 class="text-4xl font-bold animate-fadeInUp">Valkyrie</h1>
+        <span
+          class="text-sm bg-blue-500 bg-opacity-20 px-3 py-1 rounded-full animate-fadeInUp"
+          style="animation-delay: 0.2s"
+          >v1.2 beta</span
+        >
+      </header>
+      <main class="container mx-auto px-6 py-12">
+        <div
+          class="backdrop-blur-lg bg-white bg-opacity-10 p-8 rounded-xl shadow-lg mb-12 animate-fadeInUp"
+          style="animation-delay: 0.4s"
+        >
+          <h2 class="text-2xl font-semibold mb-4">Bienvenido a Valkyrie</h2>
+          <p class="mb-4">
+            Esta es una página web con tema oscuro y efectos de cristal.
           </p>
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1"
+          >
+            Explora más
+          </button>
         </div>
-        <div class="activity-card">
-          <i class="fas fa-film"></i>
-          <h3>Noches de cine</h3>
-          <p>
-            Disfruta de películas con amigos en nuestras sesiones de cine
-            virtual.
-          </p>
-        </div>
-        <div class="activity-card">
-          <i class="fas fa-gamepad"></i>
-          <h3>Torneos de juegos</h3>
-          <p>
-            Compite en emocionantes torneos de videojuegos con otros miembros.
-          </p>
-        </div>
-        <div class="activity-card">
-          <i class="fas fa-music"></i>
-          <h3>Sesiones de música</h3>
-          <p>
-            Comparte y descubre nueva música en nuestras sesiones de escucha
-            compartida.
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <section id="conoce-gente">
-      <h2>Conoce gente nueva</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <i class="fas fa-user-circle"></i>
-          <h3>Crea tu perfil</h3>
-          <p>Personaliza tu perfil y muestra tus intereses</p>
+        <div
+          class="backdrop-blur-lg bg-white bg-opacity-10 p-8 rounded-xl shadow-lg animate-fadeInUp"
+          style="animation-delay: 0.6s"
+        >
+          <h2 class="text-2xl font-semibold mb-8 text-center">Changelog</h2>
+          <div
+            class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent"
+          >
+            <div
+              class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+            >
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-blue-500 text-slate-500 group-[.is-active]:text-blue-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </div>
+              <div
+                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white bg-opacity-10 p-4 rounded shadow-md"
+              >
+                <div class="flex items-center justify-between space-x-2 mb-1">
+                  <h3 class="font-bold text-slate-100">Versión 1.2 (Actual)</h3>
+                  <time class="font-medium text-blue-500">Ahora</time>
+                </div>
+                <div class="text-slate-300">
+                  <ul class="list-disc list-inside space-y-1">
+                    <li>Implementación de tema oscuro</li>
+                    <li>Adición de efectos de cristal</li>
+                    <li>Mejoras en la interfaz de usuario</li>
+                    <li>Rediseño del changelog</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+            >
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </div>
+              <div
+                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white bg-opacity-10 p-4 rounded shadow-md"
+              >
+                <div class="flex items-center justify-between space-x-2 mb-1">
+                  <h3 class="font-bold text-slate-100">Versión 1.1</h3>
+                  <time class="font-medium text-blue-500">Anterior</time>
+                </div>
+                <div class="text-slate-300">
+                  <ul class="list-disc list-inside space-y-1">
+                    <li>Actualización de tickets</li>
+                    <li>Añadido lo básico del server Reversa</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="feature-card">
-          <i class="fas fa-users"></i>
-          <h3>Únete a grupos</h3>
-          <p>Encuentra grupos temáticos basados en tus pasiones</p>
-        </div>
-        <div class="feature-card">
-          <i class="fas fa-comments"></i>
-          <h3>Participa en chats</h3>
-          <p>Únete a chats en vivo y foros de discusión</p>
-        </div>
-        <div class="feature-card">
-          <i class="fas fa-handshake"></i>
-          <h3>Networking virtual</h3>
-          <p>Asiste a eventos de networking virtual</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="sobre-nosotros">
-      <h2>Sobre Valkyrie</h2>
-      <p>
-        Valkyrie es una comunidad en línea dedicada a conectar personas de
-        todo el mundo a través de intereses compartidos y actividades
-        divertidas. Fundada en 2024, nuestra misión es crear un espacio
-        digital acogedor donde todos puedan sentirse como en casa.
-      </p>
-      <p>
-        Colaboramos con <em>The OpenSource Team</em> para garantizar que
-        nuestra plataforma evolucione constantemente según las necesidades de
-        nuestra comunidad.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2024 Valkyrie. Todos los derechos reservados.</p>
-      <a href="https://discord.gg/hkMj7Vbe4H" class="social-link">
-        <i class="fab fa-discord"></i>
-      </a>
+      </main>
     </div>
-  </footer>
-</body>
-
+    <footer class="p-4 text-center text-gray-400 mt-12">
+      <p class="animate-fadeInUp" style="animation-delay: 0.8s">
+        © 2024 Valkyrie. Todos los derechos reservados.
+      </p>
+    </footer>
+  </body>
 </html>
