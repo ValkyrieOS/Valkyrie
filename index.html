@@ -1,95 +1,99 @@
 <!DOCTYPE html>
 <html lang="es" class="bg-gray-900">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Valkyrie</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-          animation-delay: 0.2s;
-          animation-fill-mode: forwards;
-          animation-timing-function: ease-out;
-          animation-duration: 0.5s;
-          animation-iteration-count: 1;
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-          animation-delay: 0.2s;
-        }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valkyrie</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
-      .animate-fadeInUp {
-        animation: fadeInUp 0.5s ease-out forwards;
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-    </style>
-  </head>
-  <body
-    class="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white"
-  >
-    <div class="relative z-10">
-      <header class="p-6 flex justify-between items-center">
-        <h1 class="text-4xl font-bold animate-fadeInUp">Valkyrie</h1>
-        <span
-          class="text-sm bg-blue-500 bg-opacity-20 px-3 py-1 rounded-full animate-fadeInUp"
-          style="animation-delay: 0.2s"
-          >v1.2 beta</span
-        >
-      </header>
-      <main class="container mx-auto px-6 py-12">
-        <div
-          class="backdrop-blur-lg bg-white bg-opacity-10 p-8 rounded-xl shadow-lg mb-12 animate-fadeInUp"
-          style="animation-delay: 0.4s"
-        >
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp 0.5s ease-out forwards;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
+  <div class="relative z-10">
+    <header class="p-6 flex justify-between items-center">
+      <h1 class="text-4xl font-bold animate-fadeInUp">Valkyrie</h1>
+      <nav class="space-x-4 animate-fadeInUp" style="animation-delay: 0.1s;">
+        <a href="#inicio" class="hover:text-blue-400 transition-colors">Inicio</a>
+        <a href="#changelog" class="hover:text-blue-400 transition-colors">Changelog</a>
+        <a href="#moderadores" class="hover:text-blue-400 transition-colors">Moderadores</a>
+      </nav>
+      <span class="text-sm bg-blue-600 bg-opacity-30 px-3 py-1 rounded-full animate-fadeInUp shadow-lg shadow-blue-500/50 hover:bg-blue-500 hover:bg-opacity-50 transition-all duration-300" style="animation-delay: 0.2s">v1.2.1 beta</span>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+      <section id="inicio" class="mb-12">
+        <div class="backdrop-blur-lg bg-white bg-opacity-10 p-8 rounded-xl shadow-lg animate-fadeInUp"
+          style="animation-delay: 0.4s">
           <h2 class="text-2xl font-semibold mb-4">Bienvenido a Valkyrie</h2>
           <p class="mb-4">
-            Esta es una página web con tema oscuro y efectos de cristal.
+            Valkyrie es una plataforma innovadora con un diseño moderno y funcionalidades avanzadas. Descubre un nuevo
+            nivel de experiencia de usuario con nuestro tema oscuro y efectos de cristal.
           </p>
           <button
-            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1"
-          >
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1">
             Explora más
           </button>
         </div>
+      </section>
 
-        <div
-          class="backdrop-blur-lg bg-white bg-opacity-10 p-8 rounded-xl shadow-lg animate-fadeInUp"
-          style="animation-delay: 0.6s"
-        >
+      <section id="changelog" class="mb-12">
+        <div class="backdrop-blur-lg bg-white bg-opacity-10 p-8 rounded-xl shadow-lg animate-fadeInUp"
+          style="animation-delay: 0.6s">
           <h2 class="text-2xl font-semibold mb-8 text-center">Changelog</h2>
           <div
-            class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent"
-          >
+            class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
             <div
-              class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
-            >
+              class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
               <div
-                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-blue-500 text-slate-500 group-[.is-active]:text-blue-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="w-4 h-4"
-                >
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-500 text-blue-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
                   <path d="m6 9 6 6 6-6" />
                 </svg>
               </div>
-              <div
-                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white bg-opacity-10 p-4 rounded shadow-md"
-              >
+              <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white bg-opacity-10 p-4 rounded shadow-md">
                 <div class="flex items-center justify-between space-x-2 mb-1">
-                  <h3 class="font-bold text-slate-100">Versión 1.2 (Actual)</h3>
+                  <h3 class="font-bold text-slate-100">Versión 1.2.1 (Actual)</h3>
                   <time class="font-medium text-blue-500">Ahora</time>
+                </div>
+                <div class="text-slate-300">
+                  <ul class="list-disc list-inside space-y-1">
+                    <li>Se han añadido las imágenes de los moderadores en la página</li>
+                    <li>Mejoras en la interfaz de usuario y rendimiento</li>
+                    <li>Optimización de la navegación y accesibilidad</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </div>
+              <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white bg-opacity-10 p-4 rounded shadow-md">
+                <div class="flex items-center justify-between space-x-2 mb-1">
+                  <h3 class="font-bold text-slate-100">Versión 1.2</h3>
+                  <time class="font-medium text-blue-500">Anterior</time>
                 </div>
                 <div class="text-slate-300">
                   <ul class="list-disc list-inside space-y-1">
@@ -101,30 +105,15 @@
                 </div>
               </div>
             </div>
-            <div
-              class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
-            >
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
               <div
-                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="w-4 h-4"
-                >
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
                   <path d="m6 9 6 6 6-6" />
                 </svg>
               </div>
-              <div
-                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white bg-opacity-10 p-4 rounded shadow-md"
-              >
+              <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white bg-opacity-10 p-4 rounded shadow-md">
                 <div class="flex items-center justify-between space-x-2 mb-1">
                   <h3 class="font-bold text-slate-100">Versión 1.1</h3>
                   <time class="font-medium text-blue-500">Anterior</time>
@@ -139,12 +128,72 @@
             </div>
           </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section id="moderadores">
+        <div class="backdrop-blur-lg bg-white bg-opacity-10 p-8 rounded-xl shadow-lg animate-fadeInUp"
+          style="animation-delay: 0.8s">
+          <h2 class="text-2xl font-semibold mb-8 text-center">Moderadores <span class="text-blue-400 text-lg">(8)</span></h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div
+              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src="img/glazzier.png" alt="Glazzier" class="w-32 h-32 rounded-full mb-4 border-4 border-purple-600">
+              <h3 class="text-xl font-semibold">Glazzier</h3>
+              <p class="text-purple-400 font-medium">Founder</p>
+            </div>
+            <div
+              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src="img/Yiede.png" alt="Yiede" class="w-32 h-32 rounded-full mb-4 border-4 border-red-600">
+              <h3 class="text-xl font-semibold">Yiede</h3>
+              <p class="text-red-400 font-medium">Owner</p>
+            </div>
+            <div
+              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src="img/nova.png" alt="Nova" class="w-32 h-32 rounded-full mb-4 border-4 border-yellow-600">
+              <h3 class="text-xl font-semibold">Nova</h3>
+              <p class="text-yellow-400 font-medium">Manager</p>
+            </div>
+            <div
+              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src="img/flamme.png" alt="Flamme" class="w-32 h-32 rounded-full mb-4 border-4 border-teal-400">
+              <h3 class="text-xl font-semibold">Flamme</h3>
+              <p class="text-teal-400 font-medium">Sr.Mod</p>
+            </div>
+            <div
+              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src="img/ghost.png" alt="Ghost" class="w-32 h-32 rounded-full mb-4 border-4 border-emerald-400">
+              <h3 class="text-xl font-semibold">Ghost</h3>
+              <p class="text-emerald-400 font-medium">Administrador</p>
+            </div>
+            <div
+              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src="img/hades.png" alt="Hades" class="w-32 h-32 rounded-full mb-4 border-4 border-blue-400">
+              <h3 class="text-xl font-semibold">Hades</h3>
+              <p class="text-blue-400 font-medium">Moderador</p>
+            </div>
+            <div
+              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src="img/denma.png" alt="Denma" class="w-32 h-32 rounded-full mb-4 border-4 border-green-400">
+              <h3 class="text-xl font-semibold">Denma</h3>
+              <p class="text-green-400 font-medium">Helper</p>
+            </div>
+            <div
+              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src="img/froggie.png" alt="Froggie" class="w-32 h-32 rounded-full mb-4 border-4 border-green-400">
+              <h3 class="text-xl font-semibold">Froggie</h3>
+              <p class="text-green-400 font-medium">Helper</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer class="p-4 text-center text-gray-400 mt-12">
       <p class="animate-fadeInUp" style="animation-delay: 0.8s">
         © 2024 Valkyrie. Todos los derechos reservados.
       </p>
     </footer>
-  </body>
+  </div>
+</body>
+
 </html>
