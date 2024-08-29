@@ -1,26 +1,45 @@
 <!DOCTYPE html>
-<html lang="es" class="bg-gray-900">
+<html lang="es" class="bg-gray-900 scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Valkyrie</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   <style>
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    .float { animation: float 6s ease-in-out infinite; }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .timeline-item {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
-    .animate-fadeInUp {
-      animation: fadeInUp 0.5s ease-out forwards;
+    .timeline-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .moderator-card {
+      transition: all 0.3s ease;
+    }
+
+    .moderator-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -133,7 +152,7 @@
       <section id="moderadores">
         <div class="backdrop-blur-lg bg-white bg-opacity-10 p-8 rounded-xl shadow-lg animate-fadeInUp"
           style="animation-delay: 0.8s">
-          <h2 class="text-2xl font-semibold mb-8 text-center">Moderadores <span class="text-blue-400 text-lg">(8)</span></h2>
+          <h2 class="text-2xl font-semibold mb-8 text-center">Moderadores <span class="text-blue-400 text-lg">(9)</span></h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <div
               class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
@@ -191,6 +210,13 @@
               <h3 class="text-xl font-semibold">Froggie</h3>
               <p class="text-green-400 font-medium">Helper</p>
             </div>
+            <div
+            class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
+            onclick="showModal('rxydel')">
+            <img src="img/rxydel.png" alt="rxydel" class="w-32 h-32 rounded-full mb-4 border-4 border-green-400">
+            <h3 class="text-xl font-semibold">rxydel</h3>
+            <p class="text-green-400 font-medium">Helper</p>
+          </div>
           </div>
         </div>
       </section>
@@ -284,6 +310,14 @@
           nationality: 'Andalucía, España',
           gender: 'Femenino',
           position: 'Sr.Mod'
+        },
+        rxydel: {
+          name: 'rxydel',
+          realName: 'raydel',
+          age: '14 años',
+          nationality: 'Mexico',
+          gender: 'Masculino',
+          position: 'Helper'
         }
       };
 
