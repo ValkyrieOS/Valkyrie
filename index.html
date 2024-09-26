@@ -1,348 +1,226 @@
 <!DOCTYPE html>
-<html lang="es" class="bg-gray-900 scroll-smooth">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Valkyrie</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-  <style>
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0px); }
-    }
-    .float { animation: float 6s ease-in-out infinite; }
-    
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-    .pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-
-    .timeline-item {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .timeline-item.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .moderator-card {
-      transition: all 0.3s ease;
-    }
-
-    .moderator-card:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-  </style>
-</head>
-
-<body class="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
-  <div class="relative z-10">
-    <header class="p-6 flex justify-between items-center">
-      <h1 class="text-4xl font-bold animate-fadeInUp">Valkyrie</h1>
-      <nav class="space-x-4 animate-fadeInUp" style="animation-delay: 0.1s;">
-        <a href="#inicio" class="hover:text-blue-400 transition-colors">Inicio</a>
-        <a href="#changelog" class="hover:text-blue-400 transition-colors">Changelog</a>
-        <a href="#moderadores" class="hover:text-blue-400 transition-colors">Moderadores</a>
-      </nav>
-      <span class="text-sm bg-blue-600 bg-opacity-30 px-3 py-1 rounded-full animate-fadeInUp shadow-lg shadow-blue-500/50 hover:bg-blue-500 hover:bg-opacity-50 transition-all duration-300" style="animation-delay: 0.2s">v1.2.1</span>
-    </header>
-
-    <main class="container mx-auto px-6 py-12">
-      <section id="inicio" class="mb-12">
-        <div class="backdrop-blur-lg bg-white bg-opacity-10 p-8 rounded-xl shadow-lg animate-fadeInUp"
-          style="animation-delay: 0.4s">
-          <h2 class="text-2xl font-semibold mb-4">Bienvenido a Valkyrie</h2>
-          <p class="mb-4">
-            Valkyrie es una plataforma innovadora con un diseño moderno y funcionalidades avanzadas. Descubre un nuevo
-            nivel de experiencia de usuario con nuestro tema oscuro y efectos de cristal.
-          </p>
-          <button
-            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1">
-            Explora más
-          </button>
-        </div>
-      </section>
-
-      <section id="changelog" class="mb-12">
-        <div class="backdrop-blur-lg bg-white bg-opacity-10 p-8 rounded-xl shadow-lg animate-fadeInUp"
-          style="animation-delay: 0.6s">
-          <h2 class="text-2xl font-semibold mb-8 text-center">Changelog</h2>
-          <div
-            class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
-            <div
-              class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-              <div
-                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-500 text-blue-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </div>
-              <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white bg-opacity-10 p-4 rounded shadow-md">
-                <div class="flex items-center justify-between space-x-2 mb-1">
-                  <h3 class="font-bold text-slate-100">Versión 1.2.1 (Actual)</h3>
-                  <time class="font-medium text-blue-500">Ahora</time>
-                </div>
-                <div class="text-slate-300">
-                  <ul class="list-disc list-inside space-y-1">
-                    <li>Se han añadido las imágenes de los moderadores en la página</li>
-                    <li>Mejoras en la interfaz de usuario y rendimiento</li>
-                    <li>Optimización de la navegación y accesibilidad</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-              <div
-                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </div>
-              <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white bg-opacity-10 p-4 rounded shadow-md">
-                <div class="flex items-center justify-between space-x-2 mb-1">
-                  <h3 class="font-bold text-slate-100">Versión 1.2</h3>
-                  <time class="font-medium text-blue-500">Anterior</time>
-                </div>
-                <div class="text-slate-300">
-                  <ul class="list-disc list-inside space-y-1">
-                    <li>Implementación de tema oscuro</li>
-                    <li>Adición de efectos de cristal</li>
-                    <li>Mejoras en la interfaz de usuario</li>
-                    <li>Rediseño del changelog</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-              <div
-                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </div>
-              <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white bg-opacity-10 p-4 rounded shadow-md">
-                <div class="flex items-center justify-between space-x-2 mb-1">
-                  <h3 class="font-bold text-slate-100">Versión 1.1</h3>
-                  <time class="font-medium text-blue-500">Anterior</time>
-                </div>
-                <div class="text-slate-300">
-                  <ul class="list-disc list-inside space-y-1">
-                    <li>Actualización de tickets</li>
-                    <li>Añadido lo básico del server Reversa</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="moderadores">
-        <div class="backdrop-blur-lg bg-white bg-opacity-10 p-8 rounded-xl shadow-lg animate-fadeInUp"
-          style="animation-delay: 0.8s">
-          <h2 class="text-2xl font-semibold mb-8 text-center">Moderadores <span class="text-blue-400 text-lg">(9)</span></h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <div
-              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
-              onclick="showModal('glazzier')">
-              <img src="img/glazzier.png" alt="Glazzier" class="w-32 h-32 rounded-full mb-4 border-4 border-purple-600">
-              <h3 class="text-xl font-semibold">Glazzier</h3>
-              <p class="text-purple-400 font-medium">Founder</p>
-            </div>
-            <div
-              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
-              onclick="showModal('yiede')">
-              <img src="img/Yiede.png" alt="Yiede" class="w-32 h-32 rounded-full mb-4 border-4 border-red-600">
-              <h3 class="text-xl font-semibold">Yiede</h3>
-              <p class="text-red-400 font-medium">Owner</p>
-            </div>
-            <div
-              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
-              onclick="showModal('nova')">
-              <img src="img/nova.png" alt="Nova" class="w-32 h-32 rounded-full mb-4 border-4 border-yellow-600">
-              <h3 class="text-xl font-semibold">Nova</h3>
-              <p class="text-yellow-400 font-medium">Manager</p>
-            </div>
-            <div
-              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
-              onclick="showModal('flamme')">
-              <img src="img/flamme.png" alt="Flamme" class="w-32 h-32 rounded-full mb-4 border-4 border-teal-400">
-              <h3 class="text-xl font-semibold">Flamme</h3>
-              <p class="text-teal-400 font-medium">Sr.Mod</p>
-            </div>
-            <div
-              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
-              onclick="showModal('ghost')">
-              <img src="img/ghost.png" alt="Ghost" class="w-32 h-32 rounded-full mb-4 border-4 border-emerald-400">
-              <h3 class="text-xl font-semibold">Ghost</h3>
-              <p class="text-emerald-400 font-medium">Administrador</p>
-            </div>
-            <div
-              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
-              onclick="showModal('hades')">
-              <img src="img/hades.png" alt="Hades" class="w-32 h-32 rounded-full mb-4 border-4 border-blue-400">
-              <h3 class="text-xl font-semibold">Hades</h3>
-              <p class="text-blue-400 font-medium">Moderador</p>
-            </div>
-            <div
-              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
-              onclick="showModal('denma')">
-              <img src="img/denma.png" alt="Denma" class="w-32 h-32 rounded-full mb-4 border-4 border-green-400">
-              <h3 class="text-xl font-semibold">Denma</h3>
-              <p class="text-green-400 font-medium">Helper</p>
-            </div>
-            <div
-              class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
-              onclick="showModal('froggie')">
-              <img src="img/froggie.png" alt="Froggie" class="w-32 h-32 rounded-full mb-4 border-4 border-green-400">
-              <h3 class="text-xl font-semibold">Froggie</h3>
-              <p class="text-green-400 font-medium">Helper</p>
-            </div>
-            <div
-            class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
-            onclick="showModal('rxydel')">
-            <img src="img/rxydel.png" alt="rxydel" class="w-32 h-32 rounded-full mb-4 border-4 border-green-400">
-            <h3 class="text-xl font-semibold">rxydel</h3>
-            <p class="text-green-400 font-medium">Helper</p>
-          </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="p-4 text-center text-gray-400 mt-12">
-      <p class="animate-fadeInUp" style="animation-delay: 0.8s">
-        © 2024 Valkyrie. Todos los derechos reservados.
-      </p>
-    </footer>
-  </div>
-
-  <!-- Modal -->
-  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-    <div class="bg-gray-800 p-8 rounded-xl max-w-md w-full">
-      <h2 id="modalTitle" class="text-2xl font-bold mb-4"></h2>
-      <p id="modalContent" class="text-gray-300 mb-4"></p>
-      <button onclick="closeModal()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Cerrar
-      </button>
-    </div>
-  </div>
-
-  <script>
-    function showModal(moderator) {
-      const modal = document.getElementById('modal');
-      const modalTitle = document.getElementById('modalTitle');
-      const modalContent = document.getElementById('modalContent');
-
-      const moderatorInfo = {
-        glazzier: {
-          name: 'Glazzier',
-          realName: 'Adrià',
-          age: '17 años',
-          nationality: 'Cataluña, España',
-          gender: 'Masculino',
-          position: 'Fundador'
-        },
-        yiede: {
-          name: 'Yiede',
-          realName: '??',
-          age: '14 años',
-          nationality: 'España',
-          gender: 'Femenino',
-          position: 'Owner'
-        },
-        nova: {
-          name: 'Nova',
-          realName: 'Ivan',
-          age: '14 años',
-          nationality: 'País Vasco, España',
-          gender: 'Masculino',
-          position: 'Manager'
-        },
-        ghost: {
-          name: 'Ghost',
-          realName: 'Ezequiel',
-          age: '14 años',
-          nationality: 'Uruguaya',
-          gender: 'Masculino',
-          position: 'Admin'
-        },
-        hades: {
-          name: 'Hades',
-          realName: '??',
-          age: '14 años',
-          nationality: 'España',
-          gender: 'Masculino',
-          position: 'Moderador'
-        },
-        denma: {
-          name: 'Denma',
-          realName: '??',
-          age: '16 años',
-          nationality: 'Granada, España',
-          gender: 'Femenino',
-          position: 'Helper'
-        },
-        froggie: {
-          name: 'Froggie',
-          realName: '??',
-          age: '16 años',
-          nationality: 'Granada, España',
-          gender: 'Femenino',
-          position: 'Helper'
-        },
-        flamme: {
-          name: 'Flamme',
-          realName: '??',
-          age: '?? años',
-          nationality: 'Andalucía, España',
-          gender: 'Femenino',
-          position: 'Sr.Mod'
-        },
-        rxydel: {
-          name: 'rxydel',
-          realName: 'raydel',
-          age: '14 años',
-          nationality: 'Mexico',
-          gender: 'Masculino',
-          position: 'Helper'
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valkyrie V1.3 - Próximamente</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #0a0a0a;
+        color: #fff;
+        overflow-x: hidden;
+      }
+      .orbitron {
+        font-family: "Orbitron", sans-serif;
+      }
+      .bg-pattern {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      .glitch {
+        position: relative;
+      }
+      .glitch::before,
+      .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0a0a0a;
+      }
+      .glitch::before {
+        left: 2px;
+        text-shadow: -2px 0 #ff00c1;
+        clip: rect(24px, 550px, 90px, 0);
+        animation: glitch-anim-1 3s infinite linear alternate-reverse;
+      }
+      .glitch::after {
+        left: -2px;
+        text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+        animation: glitch-anim-2 2s infinite linear alternate-reverse;
+      }
+      @keyframes glitch-anim-1 {
+        0% {
+          clip: rect(51px, 9999px, 30px, 0);
         }
-      };
+        20% {
+          clip: rect(14px, 9999px, 71px, 0);
+        }
+        40% {
+          clip: rect(59px, 9999px, 32px, 0);
+        }
+        60% {
+          clip: rect(82px, 9999px, 13px, 0);
+        }
+        80% {
+          clip: rect(5px, 9999px, 51px, 0);
+        }
+        100% {
+          clip: rect(46px, 9999px, 99px, 0);
+        }
+      }
+      @keyframes glitch-anim-2 {
+        0% {
+          clip: rect(18px, 9999px, 58px, 0);
+        }
+        20% {
+          clip: rect(74px, 9999px, 41px, 0);
+        }
+        40% {
+          clip: rect(26px, 9999px, 91px, 0);
+        }
+        60% {
+          clip: rect(38px, 9999px, 5px, 0);
+        }
+        80% {
+          clip: rect(85px, 9999px, 62px, 0);
+        }
+        100% {
+          clip: rect(10px, 9999px, 89px, 0);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black bg-pattern"
+  >
+    <div
+      class="text-center p-8 max-w-6xl w-full bg-black bg-opacity-70 rounded-3xl shadow-2xl"
+    >
+      <h1
+        class="orbitron text-7xl md:text-9xl font-bold mb-6 tracking-wider text-yellow-400 glitch"
+        data-text="Valkyrie"
+      >
+        Valkyrie
+      </h1>
 
-      const info = moderatorInfo[moderator];
-      if (info) {
-        modalTitle.textContent = info.name;
-        modalContent.innerHTML = `
-          <p><strong>Nombre real:</strong> ${info.realName}</p>
-          <p><strong>Edad:</strong> ${info.age}</p>
-          <p><strong>Nacionalidad:</strong> ${info.nationality}</p>
-          <p><strong>Género:</strong> ${info.gender}</p>
-          <p><strong>Puesto en Valkyrie:</strong> ${info.position}</p>
-        `;
+      <p class="text-2xl md:text-3xl mb-12 text-gray-300">
+        La próxima evolución llegará pronto
+      </p>
+
+      <div
+        id="countdown"
+        class="text-4xl md:text-6xl font-bold mb-16 flex flex-wrap justify-center gap-8 md:gap-16"
+      >
+        <div
+          class="flex flex-col items-center bg-gray-800 bg-opacity-50 rounded-2xl p-6 w-36 md:w-48"
+        >
+          <span id="days" class="text-5xl md:text-7xl text-yellow-400"></span>
+          <span class="text-xl mt-2 text-gray-400">Días</span>
+        </div>
+        <div
+          class="flex flex-col items-center bg-gray-800 bg-opacity-50 rounded-2xl p-6 w-36 md:w-48"
+        >
+          <span id="hours" class="text-5xl md:text-7xl text-yellow-400"></span>
+          <span class="text-xl mt-2 text-gray-400">Horas</span>
+        </div>
+        <div
+          class="flex flex-col items-center bg-gray-800 bg-opacity-50 rounded-2xl p-6 w-36 md:w-48"
+        >
+          <span
+            id="minutes"
+            class="text-5xl md:text-7xl text-yellow-400"
+          ></span>
+          <span class="text-xl mt-2 text-gray-400">Minutos</span>
+        </div>
+        <div
+          class="flex flex-col items-center bg-gray-800 bg-opacity-50 rounded-2xl p-6 w-36 md:w-48"
+        >
+          <span
+            id="seconds"
+            class="text-5xl md:text-7xl text-yellow-400"
+          ></span>
+          <span class="text-xl mt-2 text-gray-400">Segundos</span>
+        </div>
+      </div>
+
+      <h2
+        class="orbitron text-5xl md:text-7xl font-bold text-white mb-8 glitch"
+        data-text="Valkyrie V1.3"
+      >
+        Valkyrie V1.3
+      </h2>
+
+      <p class="text-2xl md:text-3xl text-yellow-400 mb-8">
+        4 de octubre de 2024
+      </p>
+
+      <a
+        href="https://discord.gg/8nABnNBfxX"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105"
+      >
+        Más información
+      </a>
+    </div>
+
+    <script>
+      function updateCountdown() {
+        const target = new Date("2024-10-04T00:00:00").getTime();
+        const now = new Date().getTime();
+        const difference = target - now;
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("hours").innerText = hours
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("minutes").innerText = minutes
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("seconds").innerText = seconds
+          .toString()
+          .padStart(2, "0");
+
+        // Ajustar la intensidad del glitch según la fecha
+        const currentDate = new Date();
+        const glitchElements = document.querySelectorAll(".glitch");
+
+        if (
+          currentDate.getFullYear() === 2024 &&
+          currentDate.getMonth() === 9 &&
+          currentDate.getDate() === 3
+        ) {
+          // Día anterior al lanzamiento: glitch muy fuerte
+          glitchElements.forEach((el) => {
+            el.style.animation =
+              "glitch-anim-1 0.5s infinite, glitch-anim-2 0.3s infinite";
+          });
+        } else if (
+          currentDate.getFullYear() === 2024 &&
+          currentDate.getMonth() === 8 &&
+          currentDate.getDate() === 30
+        ) {
+          // 30 de septiembre: glitch más fuerte
+          glitchElements.forEach((el) => {
+            el.style.animation =
+              "glitch-anim-1 2s infinite, glitch-anim-2 1.5s infinite";
+          });
+        } else {
+          // Resto del tiempo: glitch suave (configuración por defecto en CSS)
+        }
       }
 
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
-
-    function closeModal() {
-      const modal = document.getElementById('modal');
-      modal.classList.remove('flex');
-      modal.classList.add('hidden');
-    }
-  </script>
-</body>
-
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+    </script>
+  </body>
 </html>
