@@ -5,150 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Valkyrie V1.3 - Próximamente</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Orbitron:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'audiowide': ['Audiowide', 'cursive'],
+              'exo': ['Exo', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
     <style>
       body {
-        font-family: "Montserrat", sans-serif;
-        background-color: #0a0a0a;
-        color: #fff;
-        overflow-x: hidden;
+        background-color: #000;
+        overflow: hidden;
       }
-      .orbitron {
-        font-family: "Orbitron", sans-serif;
+      .light {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+        animation: float 15s infinite ease-in-out;
       }
-      .bg-pattern {
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      @keyframes float {
+        0%, 100% { transform: translateY(0) translateX(0); }
+        25% { transform: translateY(-50px) translateX(50px); }
+        50% { transform: translateY(-100px) translateX(-50px); }
+        75% { transform: translateY(-50px) translateX(-100px); }
       }
       .glitch {
         position: relative;
+        animation: glitch 5s infinite;
       }
-      .glitch::before,
-      .glitch::after {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #0a0a0a;
-      }
-      .glitch::before {
-        left: 2px;
-        text-shadow: -2px 0 #ff00c1;
-        clip: rect(24px, 550px, 90px, 0);
-        animation: glitch-anim-1 3s infinite linear alternate-reverse;
-      }
-      .glitch::after {
-        left: -2px;
-        text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-        animation: glitch-anim-2 2s infinite linear alternate-reverse;
-      }
-      @keyframes glitch-anim-1 {
+      @keyframes glitch {
         0% {
-          clip: rect(51px, 9999px, 30px, 0);
+          text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
         }
-        20% {
-          clip: rect(14px, 9999px, 71px, 0);
+        14% {
+          text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
         }
-        40% {
-          clip: rect(59px, 9999px, 32px, 0);
+        15% {
+          text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
         }
-        60% {
-          clip: rect(82px, 9999px, 13px, 0);
+        49% {
+          text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
         }
-        80% {
-          clip: rect(5px, 9999px, 51px, 0);
+        50% {
+          text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                      0.05em 0 0 rgba(0, 255, 0, 0.75),
+                      0 -0.05em 0 rgba(0, 0, 255, 0.75);
+        }
+        99% {
+          text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                      0.05em 0 0 rgba(0, 255, 0, 0.75),
+                      0 -0.05em 0 rgba(0, 0, 255, 0.75);
         }
         100% {
-          clip: rect(46px, 9999px, 99px, 0);
-        }
-      }
-      @keyframes glitch-anim-2 {
-        0% {
-          clip: rect(18px, 9999px, 58px, 0);
-        }
-        20% {
-          clip: rect(74px, 9999px, 41px, 0);
-        }
-        40% {
-          clip: rect(26px, 9999px, 91px, 0);
-        }
-        60% {
-          clip: rect(38px, 9999px, 5px, 0);
-        }
-        80% {
-          clip: rect(85px, 9999px, 62px, 0);
-        }
-        100% {
-          clip: rect(10px, 9999px, 89px, 0);
+          text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+                      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+                      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
         }
       }
     </style>
   </head>
-  <body
-    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black bg-pattern"
-  >
-    <div
-      class="text-center p-8 max-w-6xl w-full bg-black bg-opacity-70 rounded-3xl shadow-2xl"
-    >
-      <h1
-        class="orbitron text-7xl md:text-9xl font-bold mb-6 tracking-wider text-yellow-400 glitch"
-        data-text="Valkyrie"
-      >
+  <body class="min-h-screen flex items-center justify-center font-exo text-white">
+    <div class="light" style="top: 10%; left: 10%;"></div>
+    <div class="light" style="top: 20%; right: 20%;"></div>
+    <div class="light" style="bottom: 15%; left: 30%;"></div>
+    <div class="light" style="bottom: 25%; right: 25%;"></div>
+
+    <div class="text-center p-8 max-w-4xl w-full bg-black bg-opacity-80 rounded-3xl shadow-2xl z-10">
+      <h1 class="font-audiowide text-6xl md:text-8xl font-bold mb-8 tracking-wider text-yellow-400 glitch" data-text="Valkyrie">
         Valkyrie
       </h1>
 
-      <p class="text-2xl md:text-3xl mb-12 text-gray-300">
-        La próxima evolución llegará pronto
+      <h2 class="font-audiowide text-4xl md:text-6xl font-bold text-blue-400 mb-8 glitch" data-text="V1.3">
+        V1.3
+      </h2>
+
+      <p class="text-2xl md:text-3xl mb-12 text-pink-500">
+        La evolución llega en
       </p>
 
-      <div
-        id="countdown"
-        class="text-4xl md:text-6xl font-bold mb-16 flex flex-wrap justify-center gap-8 md:gap-16"
-      >
-        <div
-          class="flex flex-col items-center bg-gray-800 bg-opacity-50 rounded-2xl p-6 w-36 md:w-48"
-        >
+      <div id="countdown" class="text-4xl md:text-6xl font-bold mb-16 flex flex-wrap justify-center gap-8">
+        <div class="flex flex-col items-center">
           <span id="days" class="text-5xl md:text-7xl text-yellow-400"></span>
           <span class="text-xl mt-2 text-gray-400">Días</span>
         </div>
-        <div
-          class="flex flex-col items-center bg-gray-800 bg-opacity-50 rounded-2xl p-6 w-36 md:w-48"
-        >
+        <div class="flex flex-col items-center">
           <span id="hours" class="text-5xl md:text-7xl text-yellow-400"></span>
           <span class="text-xl mt-2 text-gray-400">Horas</span>
         </div>
-        <div
-          class="flex flex-col items-center bg-gray-800 bg-opacity-50 rounded-2xl p-6 w-36 md:w-48"
-        >
-          <span
-            id="minutes"
-            class="text-5xl md:text-7xl text-yellow-400"
-          ></span>
+        <div class="flex flex-col items-center">
+          <span id="minutes" class="text-5xl md:text-7xl text-yellow-400"></span>
           <span class="text-xl mt-2 text-gray-400">Minutos</span>
         </div>
-        <div
-          class="flex flex-col items-center bg-gray-800 bg-opacity-50 rounded-2xl p-6 w-36 md:w-48"
-        >
-          <span
-            id="seconds"
-            class="text-5xl md:text-7xl text-yellow-400"
-          ></span>
+        <div class="flex flex-col items-center">
+          <span id="seconds" class="text-5xl md:text-7xl text-yellow-400"></span>
           <span class="text-xl mt-2 text-gray-400">Segundos</span>
         </div>
       </div>
 
-      <h2
-        class="orbitron text-5xl md:text-7xl font-bold text-white mb-8 glitch"
-        data-text="Valkyrie V1.3"
-      >
-        Valkyrie V1.3
-      </h2>
-
-      <p class="text-2xl md:text-3xl text-yellow-400 mb-8">
+      <p class="text-3xl md:text-4xl text-yellow-400 mb-12">
         4 de octubre de 2024
       </p>
 
@@ -156,9 +130,9 @@
         href="https://discord.gg/8nABnNBfxX"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105"
+        class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105"
       >
-        Más información
+        Únete a la revolución
       </a>
     </div>
 
@@ -169,54 +143,14 @@
         const difference = target - now;
 
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (difference % (1000 * 60 * 60)) / (1000 * 60)
-        );
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-        document.getElementById("days").innerText = days
-          .toString()
-          .padStart(2, "0");
-        document.getElementById("hours").innerText = hours
-          .toString()
-          .padStart(2, "0");
-        document.getElementById("minutes").innerText = minutes
-          .toString()
-          .padStart(2, "0");
-        document.getElementById("seconds").innerText = seconds
-          .toString()
-          .padStart(2, "0");
-
-        // Ajustar la intensidad del glitch según la fecha
-        const currentDate = new Date();
-        const glitchElements = document.querySelectorAll(".glitch");
-
-        if (
-          currentDate.getFullYear() === 2024 &&
-          currentDate.getMonth() === 9 &&
-          currentDate.getDate() === 3
-        ) {
-          // Día anterior al lanzamiento: glitch muy fuerte
-          glitchElements.forEach((el) => {
-            el.style.animation =
-              "glitch-anim-1 0.5s infinite, glitch-anim-2 0.3s infinite";
-          });
-        } else if (
-          currentDate.getFullYear() === 2024 &&
-          currentDate.getMonth() === 8 &&
-          currentDate.getDate() === 30
-        ) {
-          // 30 de septiembre: glitch más fuerte
-          glitchElements.forEach((el) => {
-            el.style.animation =
-              "glitch-anim-1 2s infinite, glitch-anim-2 1.5s infinite";
-          });
-        } else {
-          // Resto del tiempo: glitch suave (configuración por defecto en CSS)
-        }
+        document.getElementById("days").innerText = days.toString().padStart(2, "0");
+        document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
+        document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
+        document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
       }
 
       setInterval(updateCountdown, 1000);
