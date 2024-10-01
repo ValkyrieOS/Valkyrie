@@ -1,54 +1,24 @@
-# Valkyrie
+<p align="center"><img src="https://socialify.git.ci/Glazzier/Valkyrie/image?description=1&amp;forks=1&amp;issues=1&amp;language=1&amp;name=1&amp;owner=1&amp;pulls=1&amp;stargazers=1&amp;theme=Auto" alt="project-image"></p>
 
-Valkyrie is an innovative platform designed to connect people from all over the world. With its modern design and advanced features, Valkyrie offers a new level of user experience.
+<p align="center"><img src="https://img.shields.io/github/repo-size/Glazzier/Valkyrie" alt="shields"><img src="https://img.shields.io/badge/actual_version-1.2.1-lima" alt="shields"></p>
 
-## Features
+<h2>🚀 Demo</h2>
 
-- **Modern Design**: Enjoy a sleek interface with a dark theme and glass effects.
-- **Changelog**: Keep track of the latest updates and improvements.
-- **Moderator Showcase**: Meet our dedicated team of moderators.
+[https://glazzier.github.io/Valkyrie/](https://glazzier.github.io/Valkyrie/)
 
-## Current Version
+<h2>🍰 Contribution Guidelines:</h2>
 
-**v1.2.1 beta**
+Solo se permite la mejora de diseño y arreglos de las cosas que se meten no se permite añadir más cosas sin permiso de una persona con rango de Sr.Admin para arriba
 
-### Recent Updates
+  
+  
+<h2>💻 Built with</h2>
 
-- Added moderator images to the page
-- Improved user interface and performance
-- Enhanced navigation and accessibility
+Technologies used in the project:
 
-## Moderators
+*   HTML
+*   Tailwind CSS
 
-Valkyrie is supported by a team of 8 dedicated moderators, including:
+<h2>🛡️ License:</h2>
 
-- Glazzier (Founder)
-- Yiede (Owner)
-- Nova (Manager)
-- Flamme (Sr.Mod)
-- Ghost (Administrator)
-- Hades (Moderator)
-- Denma (Helper)
-- Froggie (Helper)
-
-## Getting Started
-
-To explore Valkyrie, visit our main sections:
-
-- Home
-- Changelog
-- Moderators
-
-## Contributing
-
-We welcome contributions to improve Valkyrie. Please read our contributing guidelines before submitting pull requests.
-
-## License
-
-© 2024 Valkyrie. All rights reserved.
-
-## Contact
-
-For more information or support, please reach out to our team through the platform.
-
-Join Valkyrie today and start connecting with people from around the globe!
+This project is licensed under the MIT Lisence
