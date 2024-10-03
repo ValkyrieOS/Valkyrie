@@ -1,0 +1,33 @@
+[
+  {
+    "nombre": "Acceso a NauticChange (User Only)",
+    "descripcion": "Esto te permite cambiar dinero entre modalidades de NauticMC",
+    "precioAntes": 300.0,
+    "precioAhora": 242,
+    "tags": [
+      "Oferta del Día"
+    ]
+  },
+  {
+    "nombre": "Acceso a NauticChange (Clan Only)",
+    "descripcion": "Esto te permite que tu clan entero pueda utilizar el cambio de dinero entre modalidades de NauticMC",
+    "precioAntes": 3500,
+    "precioAhora": 2664,
+    "tags": [
+      "Oferta del Día"
+    ]
+  },
+  {
+    "nombre": "Acceso a Roleplay +",
+    "descripcion": "Podras acceder al roleplay+",
+    "precioAntes": 150,
+    "precioAhora": 145
+  },
+  {
+    "nombre": "1 mes de VIP en Valkyrie",
+    "descripcion": "Consigue el rango VIP y sus recompensas",
+    "precioAntes": 150.0,
+    "precioAhora": 150,
+    "tags": []
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "id": "1726426187152",
+    "name": "Glazzier",
+    "balance": 702,
+    "transactions": [
+      {
+        "id": "1726426403739",
+        "amount": 50000,
+        "description": "Balance inicial",
+        "date": "2024-09-15T18:53:23.739Z"
+      },
+      {
+        "id": "1726431828838",
+        "amount": -200,
+        "description": "Hosteo evento Simon Dice",
+        "date": "2024-09-15T20:23:48.838Z"
+      },
+      {
+        "id": "1726467219894",
+        "amount": -20,
+        "description": "Regalo",
+        "date": "2024-09-16T06:13:39.894Z",
+        "sender": "Glazzier",
+        "receiver": "ZzZz"
+      },
+      {
+        "id": "1726513538700",
+        "amount": -10,
+        "description": "Bono inicial",
+        "date": "2024-09-16T19:05:38.700Z",
+        "sender": "Glazzier",
+        "receiver": "carlos0195"
+      },
+      {
+        "id": "1726581524129",
+        "amount": -10,
+        "description": "Bono de bienvenida",
+        "date": "2024-09-17T13:58:44.129Z",
+        "sender": "Glazzier",
+        "receiver": "sksgnd"
+      },
+      {
+        "id": "1726662206342",
+        "amount": -2,
+        "description": "Salario día 17/09/2024",
+        "date": "2024-09-18T12:23:26.342Z",
+        "sender": "Glazzier",
+        "receiver": "MagmaCube200"
+      },
+      {
+        "id": "1726662411323",
+        "amount": -3,
+        "description": "Salario",
+        "date": "2024-09-18T12:26:51.323Z",
+        "sender": "Glazzier",
+        "receiver": "Hades"
+      },
+      {
+        "id": "1726670048404",
+        "amount": -2,
+        "description": "Invite Reward",
+        "date": "2024-09-18T14:34:08.404Z",
+        "sender": "Glazzier",
+        "receiver": "dariooo13pbl"
+      },
+      {
+        "id": "1726670090100",
+        "amount": -1,
+        "description": "Invite reward",
+        "date": "2024-09-18T14:34:50.100Z",
+        "sender": "Glazzier",
+        "receiver": "MagmaCube200"
+      },
+      {
+        "id": "1726686269769",
+        "amount": -48427,
+        "description": "demasiadas XD",
+        "date": "2024-09-18T19:04:29.769Z",
+        "sender": "Glazzier",
+        "receiver": "Sistema"
+      },
+      {
+        "id": "1726726302606",
+        "amount": -23,
+        "description": "Nivel 5 + Invite Rewards",
+        "date": "2024-09-19T06:11:42.606Z",
+        "sender": "Glazzier",
+        "receiver": "MagmaCube200"
+      },
+      {
+        "id": "1726727251757",
+        "amount": 600,
+        "description": "Salario semanal",
+        "date": "2024-09-19T06:27:31.757Z",
+        "sender": "Sistema",
+        "receiver": "Glazzier"
+      },
+      {
+        "id": "1726864363437",
+        "amount": -1200,
+        "description": "12 F-18 y 420.000 soldados",
+        "date": "2024-09-20T20:32:43.437Z",
+        "sender": "Glazzier",
+        "receiver": "Sistema"
+      }
+    ],
+    "rank": "Founder"
+  },
+  {
+    "id": "1726429782746",
+    "name": "Yiede",
+    "balance": 500,
+    "transactions": [
+      {
+        "id": "1726727251757",
+        "amount": 500,
+        "description": "Salario semanal",
+        "date": "2024-09-19T06:27:31.757Z",
+        "sender": "Sistema",
+        "receiver": "Yiede"
+      }
+    ],
+    "rank": "Owner"
+  },
+  {
+    "id": "1726429974789",
+    "name": "ZzZz",
+    "balance": 270,
+    "transactions": [
+      {
+        "id": "1726467219894",
+        "amount": 20,
+        "description": "Regalo",
+        "date": "2024-09-16T06:13:39.894Z",
+        "sender": "Glazzier",
+        "receiver": "ZzZz"
+      },
+      {
+        "id": "1726727251757",
+        "amount": 250,
+        "description": "Salario semanal",
+        "date": "2024-09-19T06:27:31.757Z",
+        "sender": "Sistema",
+        "receiver": "ZzZz"
+      }
+    ],
+    "rank": "Manager"
+  },
+  {
+    "id": "1726430035073",
+    "name": "Hades",
+    "balance": 33,
+    "transactions": [
+      {
+        "id": "1726431828838",
+        "amount": 200,
+        "description": "Hosteo evento Simon Dice",
+        "date": "2024-09-15T20:23:48.838Z"
+      },
+      {
+        "id": "1726662411323",
+        "amount": 3,
+        "description": "Salario",
+        "date": "2024-09-18T12:26:51.323Z",
+        "sender": "Glazzier",
+        "receiver": "Hades"
+      },
+      {
+        "id": "1726727251757",
+        "amount": 100,
+        "description": "Salario semanal",
+        "date": "2024-09-19T06:27:31.757Z",
+        "sender": "Sistema",
+        "receiver": "Hades"
+      },
+      {
+        "id": "1726860458498",
+        "amount": -20,
+        "description": "10k soldados",
+        "date": "2024-09-20T19:27:38.498Z",
+        "sender": "Hades",
+        "receiver": "Sistema"
+      },
+      {
+        "id": "1726952298338",
+        "amount": -250,
+        "description": "Compra en tienda",
+        "date": "2024-09-21T20:58:18.338Z",
+        "sender": "Hades",
+        "receiver": "Sistema"
+      }
+    ],
+    "rank": "Sr.Mod"
+  },
+  {
+    "id": "1726430048236",
+    "name": "Aflac12",
+    "balance": 50,
+    "transactions": [
+      {
+        "id": "1726727251757",
+        "amount": 50,
+        "description": "Salario semanal",
+        "date": "2024-09-19T06:27:31.757Z",
+        "sender": "Sistema",
+        "receiver": "Aflac12"
+      }
+    ],
+    "rank": "Mod"
+  },
+  {
+    "id": "1726485784885",
+    "name": "Nova",
+    "balance": 250,
+    "transactions": [
+      {
+        "id": "1726727251757",
+        "amount": 250,
+        "description": "Salario semanal",
+        "date": "2024-09-19T06:27:31.757Z",
+        "sender": "Sistema",
+        "receiver": "Nova"
+      }
+    ],
+    "rank": "Manager"
+  },
+  {
+    "id": "1726513454782",
+    "name": "carlos0195",
+    "balance": 10,
+    "transactions": [
+      {
+        "id": "1726513538700",
+        "amount": 10,
+        "description": "Bono inicial",
+        "date": "2024-09-16T19:05:38.700Z",
+        "sender": "Glazzier",
+        "receiver": "carlos0195"
+      }
+    ],
+    "rank": "Miembro"
+  },
+  {
+    "id": "1726581506149",
+    "name": "sksgnd",
+    "balance": 10,
+    "transactions": [
+      {
+        "id": "1726581524129",
+        "amount": 10,
+        "description": "Bono de bienvenida",
+        "date": "2024-09-17T13:58:44.129Z",
+        "sender": "Glazzier",
+        "receiver": "sksgnd"
+      }
+    ],
+    "rank": "Miembro"
+  },
+  {
+    "id": "1726661455476",
+    "name": "MagmaCube200",
+    "balance": 46,
+    "transactions": [
+      {
+        "id": "1726662206342",
+        "amount": 2,
+        "description": "Salario día 17/09/2024",
+        "date": "2024-09-18T12:23:26.342Z",
+        "sender": "Glazzier",
+        "receiver": "MagmaCube200"
+      },
+      {
+        "id": "1726670090100",
+        "amount": 1,
+        "description": "Invite reward",
+        "date": "2024-09-18T14:34:50.100Z",
+        "sender": "Glazzier",
+        "receiver": "MagmaCube200"
+      },
+      {
+        "id": "1726686291725",
+        "amount": 50,
+        "description": "Evento ganado",
+        "date": "2024-09-18T19:04:51.725Z",
+        "sender": "Sistema",
+        "receiver": "MagmaCube200"
+      },
+      {
+        "id": "1726726302606",
+        "amount": 23,
+        "description": "Nivel 5 + Invite Rewards",
+        "date": "2024-09-19T06:11:42.606Z",
+        "sender": "Glazzier",
+        "receiver": "MagmaCube200"
+      },
+      {
+        "id": "1726858537306",
+        "amount": -10,
+        "description": "5000 soldados",
+        "date": "2024-09-20T18:55:37.306Z",
+        "sender": "MagmaCube200",
+        "receiver": "Sistema"
+      },
+      {
+        "id": "1726862136682",
+        "amount": -20,
+        "description": "10.000 soldados",
+        "date": "2024-09-20T19:55:36.682Z",
+        "sender": "MagmaCube200",
+        "receiver": "Sistema"
+      }
+    ],
+    "rank": "Miembro"
+  },
+  {
+    "id": "1726670016247",
+    "name": "dariooo13pbl",
+    "balance": 2,
+    "transactions": [
+      {
+        "id": "1726670048404",
+        "amount": 2,
+        "description": "Invite Reward",
+        "date": "2024-09-18T14:34:08.404Z",
+        "sender": "Glazzier",
+        "receiver": "dariooo13pbl"
+      }
+    ],
+    "rank": "Miembro"
+  }
+]

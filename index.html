@@ -8,6 +8,24 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <style>
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+
     @keyframes pulse {
 
       0%,
@@ -20,34 +38,8 @@
       }
     }
 
-    .bg-glow::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      right: -50%;
-      bottom: 50%;
-      background: radial-gradient(ellipse at center,
-          rgba(6, 182, 212, 0.3) 0%,
-          rgba(30, 27, 75, 0) 70%);
-      animation: pulse 4s infinite;
-      z-index: -1;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .fade-in {
-      animation: fadeIn 1s ease-out;
+    .pulse {
+      animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
 
     #three-canvas {
@@ -56,19 +48,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -2;
-    }
-
-    body {
-      overflow-x: hidden;
-    }
-
-    .hover-scale {
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .hover-scale:hover {
-      transform: scale(1.05);
+      z-index: -1;
     }
   </style>
 </head>
@@ -76,18 +56,30 @@
 <body class="bg-gray-900 text-white">
   <canvas id="three-canvas"></canvas>
   <div class="relative min-h-screen">
-    <div class="bg-glow absolute inset-0"></div>
+    <!-- Simplified Navigation Buttons -->
+    <div class="fixed top-0 left-0 right-0 z-50 p-4 flex justify-center space-x-4">
+      <a href="index.html"
+        class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Inicio</a>
+      <a href="balance.html"
+        class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Balance</a>
+      <a href="tiendas.html"
+        class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Tiendas</a>
+    </div>
+
     <header class="relative h-screen flex items-center justify-center">
-      <div class="text-center z-10 fade-in">
+      <div class="text-center z-10">
         <h1
-          class="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-          Valkyrie V1.3
+          class="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 float">
+          Valkyrie
         </h1>
+        <div class="inline-block bg-cyan-600 text-white text-xs px-2 py-1 rounded-full mb-4 pulse">
+          Versión 1.3
+        </div>
         <p class="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-300 mb-8">
           La Comunidad Discord Definitiva
         </p>
         <a href="https://discord.gg/8nABnNBfxX" target="_blank" rel="noopener noreferrer"
-          class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 inline-block">
+          class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 inline-block hover:shadow-lg">
           Únete a nuestro Discord
         </a>
       </div>
@@ -102,17 +94,20 @@
           compartir y crecer juntos.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-scale">
+          <div
+            class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-opacity-70">
             <h3 class="text-2xl font-semibold mb-4 text-cyan-400">Comunidad Activa</h3>
             <p class="text-gray-300">Únete a conversaciones animadas, eventos regulares y desafíos emocionantes que
               mantienen nuestra comunidad viva y en crecimiento.</p>
           </div>
-          <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-scale">
+          <div
+            class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-opacity-70">
             <h3 class="text-2xl font-semibold mb-4 text-cyan-400">Soporte 24/7</h3>
             <p class="text-gray-300">Nuestro equipo de moderadores está siempre disponible para ayudarte, asegurando un
               ambiente amigable y seguro para todos.</p>
           </div>
-          <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-scale">
+          <div
+            class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-opacity-70">
             <h3 class="text-2xl font-semibold mb-4 text-cyan-400">Contenido Exclusivo</h3>
             <p class="text-gray-300">Accede a canales exclusivos, sorteos y colaboraciones únicas con creadores de
               contenido y desarrolladores.</p>
@@ -135,14 +130,14 @@
         </p>
         <div class="text-center">
           <a href="https://discord.gg/8nABnNBfxX" target="_blank" rel="noopener noreferrer"
-            class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 inline-block">
+            class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 inline-block hover:shadow-lg">
             Comienza Tu Aventura
           </a>
         </div>
       </section>
     </main>
 
-    <footer class="bg-gray-800 py-12 mt-12 relative z-10">
+    <footer class="bg-gray-800 bg-opacity-50 py-12 mt-12 relative z-10">
       <div class="container mx-auto px-4 text-center">
         <p class="text-2xl font-bold mb-4">Valkyrie V1.3</p>
         <p class="text-gray-400 mb-4">Construyendo la comunidad del futuro, hoy.</p>
@@ -164,31 +159,32 @@
     const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('three-canvas'), alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    // Create particles
-    const particlesGeometry = new THREE.BufferGeometry();
-    const particlesCount = 5000;
-    const posArray = new Float32Array(particlesCount * 3);
-
-    for (let i = 0; i < particlesCount * 3; i++) {
-      posArray[i] = (Math.random() - 0.5) * 10;
-    }
-
-    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-
-    const particlesMaterial = new THREE.PointsMaterial({
-      size: 0.005,
-      color: 0x06b6d4, // Cyan color
+    // Create a starfield
+    const starGeometry = new THREE.BufferGeometry();
+    const starMaterial = new THREE.PointsMaterial({
+      color: 0xFFFFFF,
+      size: 0.1,
+      transparent: true
     });
 
-    const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-    scene.add(particlesMesh);
+    const starVertices = [];
+    for (let i = 0; i < 10000; i++) {
+      const x = (Math.random() - 0.5) * 2000;
+      const y = (Math.random() - 0.5) * 2000;
+      const z = -Math.random() * 2000;
+      starVertices.push(x, y, z);
+    }
 
-    camera.position.z = 3;
+    starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
+    const stars = new THREE.Points(starGeometry, starMaterial);
+    scene.add(stars);
+
+    camera.position.z = 5;
 
     // Animation loop
     function animate() {
       requestAnimationFrame(animate);
-      particlesMesh.rotation.y += 0.001;
+      stars.rotation.y += 0.0002;
       renderer.render(scene, camera);
     }
     animate();
@@ -207,7 +203,7 @@
         const moderatorsContainer = document.getElementById("moderators");
         moderators.forEach((mod) => {
           const modElement = document.createElement("div");
-          modElement.className = "flex flex-col items-center p-6 bg-gray-800 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105";
+          modElement.className = "flex flex-col items-center p-6 bg-gray-800 bg-opacity-50 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-opacity-70";
           modElement.innerHTML = `
               <img src="${mod.avatarUrl}" alt="${mod.name}" class="w-32 h-32 rounded-full mb-4 border-4 border-cyan-500 shadow-lg">
               <h3 class="text-2xl font-semibold mb-2">${mod.name}</h3>
