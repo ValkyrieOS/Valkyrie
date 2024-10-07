@@ -79,15 +79,23 @@
   </div>
 
   <div id="formulario-pago" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-40">
-    <div class="bg-gray-800 p-8 rounded-lg shadow-xl">
+    <div class="bg-gray-800 p-8 rounded-lg shadow-xl max-w-md w-full">
       <h2 class="text-2xl font-bold mb-4">Finalizar compra</h2>
-      <label for="discord-id" class="block mb-2">ID de usuario de Discord:</label>
-      <input type="text" id="discord-id" class="w-full p-2 mb-4 text-black" placeholder="Ej: 631907198930386950">
+      <div class="mb-4">
+        <label for="discord-id" class="block mb-2">ID de usuario de Discord:</label>
+        <input type="text" id="discord-id" class="w-full p-2 text-black rounded" placeholder="Ej: 631907198930386950">
+        <a href="https://support.discord.com/hc/es/articles/206346498--D%C3%B3nde-puedo-encontrar-mi-ID-de-usuario-servidor-mensajeAttachment" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="text-horizon-300 hover:text-horizon-400 text-sm mt-1 inline-block">
+          ¿Dónde está mi ID?
+        </a>
+      </div>
       <button onclick="confirmarCompra()"
-        class="bg-horizon-400 text-white px-4 py-2 rounded-full hover:bg-horizon-500 transition-colors duration-300 w-full">
+        class="bg-horizon-400 text-white px-4 py-2 rounded-full hover:bg-horizon-500 transition-colors duration-300 w-full mb-2">
         Confirmar compra
       </button>
-      <button onclick="cerrarFormularioPago()" class="mt-2 text-horizon-300 hover:text-horizon-400">Cancelar</button>
+      <button onclick="cerrarFormularioPago()" class="text-horizon-300 hover:text-horizon-400 w-full">Cancelar</button>
     </div>
   </div>
 
