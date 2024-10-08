@@ -1,0 +1,65 @@
+[
+  {
+    "name": "ChatGPT",
+    "description": "Advanced language model for conversation and text generation",
+    "tags": ["Text", "Conversation", "AI"],
+    "url": "https://chat.openai.com/",
+    "isPaid": true
+  },
+  {
+    "name": "DALL-E",
+    "description": "AI system that creates images from textual descriptions",
+    "tags": ["Image", "Generation", "AI"],
+    "url": "https://openai.com/dall-e-3",
+    "isPaid": true
+  },
+  {
+    "name": "Gemini",
+    "description": "Google's multimodal AI model for various tasks",
+    "tags": ["Multimodal", "AI", "Google"],
+    "url": "https://deepmind.google/technologies/gemini/",
+    "isPaid": false
+  },
+  {
+    "name": "V0",
+    "description": "V0 is the best AI code model",
+    "tags": ["Code", "text"],
+    "url": "https://v0.dev/chat/",
+    "isPaid": true
+  },
+  {
+    "name": "GPT Zero",
+    "description": "Ai detector, one of the best",
+    "tags": ["Ai-Detector"],
+    "url": "https://gptzero.me/",
+    "isPaid": false
+  },
+  {
+    "name": "Morphic",
+    "description": "Morphic is the best free ai search in 2024",
+    "tags": ["Text", "Search"],
+    "url": "https://www.morphic.sh/",
+    "isPaid": false
+  },
+  {
+    "name": "Runwayml",
+    "description": "Generate text to video",
+    "tags": ["video", "text-to-video", "3d"],
+    "url": "https://runwayml.com/",
+    "isPaid": false
+  },
+  {
+    "name": "Stable Diffusion",
+    "description": "Stable Diffusion is a deep learning model that generates detailed images from text descriptions.",
+    "tags": ["Design", "Image-generator"],
+    "url": "https://stability.ai/stable-image",
+    "isPaid": false
+  },
+  {
+    "name": "Quillbot",
+    "description": "AI-powered writing tool that helps improve your writing by suggesting synonyms, rephrasing sentences, and checking for plagiarism.",
+    "tags": ["writing", "grammar", "essay", "research"],
+    "url": "https://quillbot.com/",
+    "isPaid": false
+  }
+]

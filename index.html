@@ -9,38 +9,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <style>
     @keyframes float {
-      0% {
-        transform: translateY(0px);
-      }
-
-      50% {
-        transform: translateY(-20px);
-      }
-
-      100% {
-        transform: translateY(0px);
-      }
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
     }
-
-    .float {
-      animation: float 6s ease-in-out infinite;
-    }
+    .float { animation: float 6s ease-in-out infinite; }
 
     @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 0.6;
-      }
-
-      50% {
-        opacity: 1;
-      }
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
     }
-
-    .pulse {
-      animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
+    .pulse { animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 
     #three-canvas {
       position: fixed;
@@ -53,27 +31,52 @@
   </style>
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-900 text-white font-sans">
   <canvas id="three-canvas"></canvas>
-  <div class="relative min-h-screen">
-    <!-- Simplified Navigation Buttons -->
-    <div class="fixed top-0 left-0 right-0 z-50 p-4 flex justify-center space-x-4">
-      <a href="index.html"
-        class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Inicio</a>
-      <a href="balance.html"
-        class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Balance</a>
-      <a href="tiendas.html"
-        class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Tiendas</a>
-      <a href="jobs.html"
-        class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Trabajos</a>
-      <a href="fusions.html"
-        class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Fusiones</a>
-    </div>
+  <div class="relative min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-800 bg-opacity-80 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex-shrink-0">
+            <span class="text-2xl font-bold text-cyan-400">Valkyrie</span>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Inicio</a>
+              <a href="balance.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Balance</a>
+              <a href="tiendas.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Tiendas</a>
+              <a href="jobs.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Trabajos</a>
+              <a href="fusions.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Fusiones</a>
+              <a href="ai.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">AI Library</a>
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-1 rounded-md text-sm font-medium">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
+          <a href="balance.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Balance</a>
+          <a href="tiendas.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Tiendas</a>
+          <a href="jobs.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Trabajos</a>
+          <a href="fusions.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Fusiones</a>
+          <a href="ai.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">AI Library</a>
+        </div>
+      </div>
+    </nav>
 
-    <header class="relative h-screen flex items-center justify-center">
-      <div class="text-center z-10">
-        <h1
-          class="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 float">
+    <!-- Header -->
+    <header class="relative flex items-center justify-center h-screen">
+      <div class="text-center z-10 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 float">
           Valkyrie
         </h1>
         <div class="inline-block bg-orange-500 text-white text-xs px-2 py-1 rounded-full mb-4">
@@ -89,67 +92,69 @@
       </div>
     </header>
 
-    <main class="container mx-auto px-4 py-12 sm:px-6 lg:px-8 relative z-10">
-      <section class="mb-24">
-        <h2 class="text-4xl font-bold mb-8 text-center">Bienvenido a Valkyrie</h2>
-        <p class="text-xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
-          Valkyrie es más que un simple servidor de Discord. Somos una comunidad vibrante y acogedora, dedicada a crear
-          un espacio donde los gamers, creadores de contenido y entusiastas de la tecnología pueden conectarse,
-          compartir y crecer juntos.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-opacity-70">
-            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">Comunidad Activa</h3>
-            <p class="text-gray-300">Únete a conversaciones animadas, eventos regulares y desafíos emocionantes que
-              mantienen nuestra comunidad viva y en crecimiento.</p>
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Welcome Section -->
+        <section class="mb-24">
+          <h2 class="text-4xl font-bold mb-8 text-center">Bienvenido a Valkyrie</h2>
+          <p class="text-xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
+            Valkyrie es más que un simple servidor de Discord. Somos una comunidad vibrante y acogedora, dedicada a crear
+            un espacio donde los gamers, creadores de contenido y entusiastas de la tecnología pueden conectarse,
+            compartir y crecer juntos.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-opacity-70">
+              <h3 class="text-2xl font-semibold mb-4 text-cyan-400">Comunidad Activa</h3>
+              <p class="text-gray-300">Únete a conversaciones animadas, eventos regulares y desafíos emocionantes que
+                mantienen nuestra comunidad viva y en crecimiento.</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-opacity-70">
+              <h3 class="text-2xl font-semibold mb-4 text-cyan-400">Soporte 24/7</h3>
+              <p class="text-gray-300">Nuestro equipo de moderadores está siempre disponible para ayudarte, asegurando un
+                ambiente amigable y seguro para todos.</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-opacity-70">
+              <h3 class="text-2xl font-semibold mb-4 text-cyan-400">Contenido Exclusivo</h3>
+              <p class="text-gray-300">Accede a canales exclusivos, sorteos y colaboraciones únicas con creadores de
+                contenido y desarrolladores.</p>
+            </div>
           </div>
-          <div
-            class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-opacity-70">
-            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">Soporte 24/7</h3>
-            <p class="text-gray-300">Nuestro equipo de moderadores está siempre disponible para ayudarte, asegurando un
-              ambiente amigable y seguro para todos.</p>
-          </div>
-          <div
-            class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-opacity-70">
-            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">Contenido Exclusivo</h3>
-            <p class="text-gray-300">Accede a canales exclusivos, sorteos y colaboraciones únicas con creadores de
-              contenido y desarrolladores.</p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="mb-24">
-        <h2 class="text-4xl font-bold mb-8 text-center">Nuestros Moderadores</h2>
-        <div id="moderators" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Moderators will be dynamically added here -->
-        </div>
-      </section>
+        <!-- Moderators Section -->
+        <section class="mb-24">
+          <h2 class="text-4xl font-bold mb-8 text-center">Nuestros Moderadores</h2>
+          <div id="moderators" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Moderators will be dynamically added here -->
+          </div>
+        </section>
 
-      <section class="mb-24">
-        <h2 class="text-4xl font-bold mb-8 text-center">Únete a Nuestra Comunidad</h2>
-        <p class="text-xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
-          ¿Estás listo para formar parte de algo extraordinario? Únete a Valkyrie hoy y descubre un mundo de
-          posibilidades, amistades y aventuras que te esperan.
-        </p>
-        <div class="text-center">
-          <a href="https://discord.gg/8nABnNBfxX" target="_blank" rel="noopener noreferrer"
-            class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 inline-block hover:shadow-lg">
-            Comienza Tu Aventura
-          </a>
-        </div>
-      </section>
+        <!-- Join Community Section -->
+        <section class="mb-24">
+          <h2 class="text-4xl font-bold mb-8 text-center">Únete a Nuestra Comunidad</h2>
+          <p class="text-xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
+            ¿Estás listo para formar parte de algo extraordinario? Únete a Valkyrie hoy y descubre un mundo de
+            posibilidades, amistades y aventuras que te esperan.
+          </p>
+          <div class="text-center">
+            <a href="https://discord.gg/8nABnNBfxX" target="_blank" rel="noopener noreferrer"
+              class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 inline-block hover:shadow-lg">
+              Comienza Tu Aventura
+            </a>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <footer class="bg-gray-800 bg-opacity-50 py-12 mt-12 relative z-10">
-      <div class="container mx-auto px-4 text-center">
+    <!-- Footer -->
+    <footer class="bg-gray-800 bg-opacity-80 py-12 mt-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p class="text-2xl font-bold mb-4">Valkyrie V1.3</p>
         <p class="text-gray-400 mb-4">Construyendo la comunidad del futuro, hoy.</p>
         <div class="flex justify-center space-x-4 mb-4">
-          <a href="https://www.reddit.com/r/ValkyrieTeam/"
-            class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">Reddit</a>
-          <a href="https://www.youtube.com/@ValkyrieTeamES"
-            class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">YouTube</a>
+          <a href="https://www.reddit.com/r/ValkyrieTeam/" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">Reddit</a>
+          <a href="https://www.youtube.com/@ValkyrieTeamES" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">YouTube</a>
         </div>
         <p class="text-sm text-gray-500">&copy; 2024 Valkyrie. Todos los derechos reservados.</p>
       </div>
@@ -209,13 +214,21 @@
           const modElement = document.createElement("div");
           modElement.className = "flex flex-col items-center p-6 bg-gray-800 bg-opacity-50 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-opacity-70";
           modElement.innerHTML = `
-              <img src="${mod.avatarUrl}" alt="${mod.name}" class="w-32 h-32 rounded-full mb-4 border-4 border-cyan-500 shadow-lg">
-              <h3 class="text-2xl font-semibold mb-2">${mod.name}</h3>
-              <p class="text-cyan-400 font-medium">${mod.role}</p>
-            `;
+            <img src="${mod.avatarUrl}" alt="${mod.name}" class="w-32 h-32 rounded-full  mb-4 border-4 border-cyan-500 shadow-lg">
+            <h3 class="text-2xl font-semibold mb-2">${mod.name}</h3>
+            <p class="text-cyan-400 font-medium">${mod.role}</p>
+          `;
           moderatorsContainer.appendChild(modElement);
         });
       });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
   </script>
 </body>
 
