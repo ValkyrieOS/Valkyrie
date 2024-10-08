@@ -61,5 +61,19 @@
     "tags": ["writing", "grammar", "essay", "research"],
     "url": "https://quillbot.com/",
     "isPaid": false
+  },
+  {
+    "name": "Perplexity AI",
+    "description": "Un motor de búsqueda de IA que utiliza modelos de lenguaje grandes y motores de búsqueda.",
+    "tags": ["Search", "Website"],
+    "url": "htttps://perplexity.ai",
+    "isPaid": true
+  },
+  {
+    "name": "Gamma AI",
+    "description": "Aplicación Gamma es una herramienta potenciada por IA que crea presentaciones impresionantes, páginas web y documentos sin esfuerzo.",
+    "tags": ["Powerpoint", "Website"],
+    "url": "https://gamma.app",
+    "isPaid": false
   }
 ]
