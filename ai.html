@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full dark">
+<html lang="en" class="h-full">
 
 <head>
     <meta charset="UTF-8" />
@@ -8,38 +8,36 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-
         .tool-card {
             transition: all 0.3s ease;
         }
 
         .tool-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .filter-button {
+            transition: all 0.3s ease;
+        }
+
+        .filter-button:hover {
+            transform: scale(1.05);
         }
     </style>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        primary: "#4F46E5",
-                        secondary: "#10B981",
+                        primary: "#6C63FF",
+                        secondary: "#FF6584",
+                        tertiary: "#38B2AC",
+                        dark: {
+                            100: "#1E1E1E",
+                            200: "#2D2D2D",
+                            300: "#3C3C3C",
+                        },
                     },
                 },
             },
@@ -47,58 +45,59 @@
     </script>
 </head>
 
-<body
-    class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col transition-colors duration-200">
-    <header class="bg-white dark:bg-gray-800 shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-4">
-                <h1 class="text-3xl font-bold text-primary dark:text-white">AI Library</h1>
-                <span class="text-sm font-medium text-gray-500 dark:text-gray-400">v1.2</span>
+<body class="bg-dark-100 text-gray-200 min-h-screen flex flex-col transition-colors duration-200">
+    <header class="bg-dark-200 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                    <h1 class="text-4xl font-bold text-primary">AI Library</h1>
+                    <span class="text-sm font-medium bg-dark-300 text-primary px-2 py-1 rounded-full">v1.2</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" id="search" placeholder="Search AI tools..."
+                            class="w-full md:w-64 px-4 py-2 pl-10 rounded-full bg-dark-300 text-white focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200" />
+                        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
             </div>
-            <button id="darkModeToggle"
-                class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
-                <i class="fas fa-sun dark:fa-moon"></i>
-            </button>
         </div>
     </header>
 
-    <nav class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-        <div class="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
-            <div class="relative flex-grow max-w-xl">
-                <input type="text" id="search" placeholder="Search AI tools..."
-                    class="w-full px-4 py-2 pl-10 rounded-full bg-white dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-secondary transition-all duration-200" />
-                <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-            </div>
-            <div class="flex items-center space-x-4 mt-3 sm:mt-0">
-                <label class="inline-flex items-center cursor-pointer">
-                    <input type="checkbox" id="free-filter"
-                        class="form-checkbox h-5 w-5 text-primary rounded focus:ring-primary dark:focus:ring-secondary">
-                    <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Free</span>
-                </label>
-                <label class="inline-flex items-center cursor-pointer">
-                    <input type="checkbox" id="paid-filter"
-                        class="form-checkbox h-5 w-5 text-primary rounded focus:ring-primary dark:focus:ring-secondary">
-                    <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Paid</span>
-                </label>
+    <nav class="bg-dark-200 shadow-md py-4 sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-2">
+                <button id="all-filter"
+                    class="filter-button px-6 py-2 rounded-full bg-primary text-white font-medium hover:bg-opacity-90 transition-colors">
+                    All
+                </button>
+                <button id="free-filter"
+                    class="filter-button px-6 py-2 rounded-full bg-secondary text-white font-medium hover:bg-opacity-90 transition-colors">
+                    Free
+                </button>
+                <button id="paid-filter"
+                    class="filter-button px-6 py-2 rounded-full bg-tertiary text-white font-medium hover:bg-opacity-90 transition-colors">
+                    Paid
+                </button>
             </div>
         </div>
     </nav>
 
     <main class="flex-grow container mx-auto px-4 py-8">
-        <div id="ai-tools-count" class="text-center mb-6 text-lg font-medium text-gray-600 dark:text-gray-400"></div>
+        <div id="ai-tools-count" class="text-center mb-6 text-lg font-medium text-gray-400"></div>
         <div id="ai-tools" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <!-- AI tools will be dynamically inserted here -->
         </div>
     </main>
 
-    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-6 text-center">
-        <p class="text-gray-600 dark:text-gray-400">&copy; 2024 Valkyrie. All rights reserved.</p>
-        <p class="mt-2 text-gray-500 dark:text-gray-500">Made with ♥️ by Valkyrie</p>
+    <footer class="bg-dark-200 text-white py-8 text-center">
+        <p>&copy; 2024 Valkyrie. All rights reserved.</p>
+        <p class="mt-2 text-gray-400">Made with ♥️ by Valkyrie</p>
     </footer>
 
     <script>
         let aiTools = [];
-        let darkMode = true;
+        let currentFilter = 'all';
 
         function renderTools(tools) {
             const aiToolsContainer = document.getElementById("ai-tools");
@@ -108,22 +107,22 @@
 
             tools.forEach((tool, index) => {
                 const toolElement = document.createElement("div");
-                toolElement.className = "tool-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 fade-in";
-                toolElement.style.animationDelay = `${index * 0.05}s`;
+                toolElement.className = "tool-card bg-dark-200 rounded-lg overflow-hidden shadow-lg border border-dark-300";
+                toolElement.style.animation = `fadeIn 0.5s ease-out ${index * 0.1}s both`;
                 toolElement.innerHTML = `
                     <div class="p-5">
                         <div class="flex justify-between items-start mb-3">
-                            <h2 class="text-xl font-semibold text-gray-900 dark:text-white">${tool.name}</h2>
+                            <h2 class="text-xl font-semibold text-white">${tool.name}</h2>
                             <span class="px-2 py-1 rounded text-xs font-semibold ${getPricingClass(tool)}">
                                 ${getPricingLabel(tool)}
                             </span>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">${tool.description}</p>
+                        <p class="text-gray-400 text-sm mb-4">${tool.description}</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            ${tool.tags.map(tag => `<span class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs px-2 py-1 rounded">${tag}</span>`).join('')}
+                            ${tool.tags.map(tag => `<span class="bg-dark-300 text-gray-300 text-xs px-2 py-1 rounded">${tag}</span>`).join('')}
                         </div>
                         <div class="flex justify-end items-center">
-                            <a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1 bg-primary hover:bg-primary-dark text-white text-sm rounded transition-colors">
+                            <a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-primary hover:bg-opacity-90 text-white text-sm rounded-full transition-colors">
                                 Visit <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
@@ -134,10 +133,10 @@
         }
 
         function getPricingClass(tool) {
-            if (tool.isPaid) return "bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100";
-            if (tool.isFreemium) return "bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100";
-            if (tool.isOpenSource) return "bg-purple-100 text-purple-800 dark:bg-purple-800 dark:text-purple-100";
-            return "bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100";
+            if (tool.isPaid) return "bg-secondary text-white";
+            if (tool.isFreemium) return "bg-tertiary text-white";
+            if (tool.isOpenSource) return "bg-purple-500 text-white";
+            return "bg-green-500 text-white";
         }
 
         function getPricingLabel(tool) {
@@ -149,32 +148,33 @@
 
         function filterTools() {
             const searchTerm = document.getElementById("search").value.toLowerCase();
-            const freeFilter = document.getElementById("free-filter").checked;
-            const paidFilter = document.getElementById("paid-filter").checked;
 
             const filteredTools = aiTools.filter((tool) => {
                 const matchesSearch = tool.name.toLowerCase().includes(searchTerm) ||
                     tool.description.toLowerCase().includes(searchTerm) ||
                     tool.tags.some(tag => tag.toLowerCase().includes(searchTerm));
-                const matchesPaymentFilter = (freeFilter && !tool.isPaid) || (paidFilter && tool.isPaid) || (!freeFilter && !paidFilter);
-                return matchesSearch && matchesPaymentFilter;
+                const matchesFilter = currentFilter === 'all' ||
+                    (currentFilter === 'free' && !tool.isPaid) ||
+                    (currentFilter === 'paid' && tool.isPaid);
+                return matchesSearch && matchesFilter;
             });
 
             renderTools(filteredTools);
         }
 
-        function toggleDarkMode() {
-            darkMode = !darkMode;
-            document.documentElement.classList.toggle('dark');
-            const icon = document.querySelector("#darkModeToggle i");
-            icon.classList.toggle('fa-sun');
-            icon.classList.toggle('fa-moon');
+        function setActiveFilter(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('nav button').forEach(btn => {
+                btn.classList.remove('bg-opacity-90');
+            });
+            document.getElementById(`${filter}-filter`).classList.add('bg-opacity-90');
+            filterTools();
         }
 
-        document.getElementById("darkModeToggle").addEventListener("click", toggleDarkMode);
         document.getElementById("search").addEventListener("input", filterTools);
-        document.getElementById("free-filter").addEventListener("change", filterTools);
-        document.getElementById("paid-filter").addEventListener("change", filterTools);
+        document.getElementById("all-filter").addEventListener("click", () => setActiveFilter('all'));
+        document.getElementById("free-filter").addEventListener("click", () => setActiveFilter('free'));
+        document.getElementById("paid-filter").addEventListener("click", () => setActiveFilter('paid'));
 
         fetch("data/ai-tools.json")
             .then((response) => response.json())

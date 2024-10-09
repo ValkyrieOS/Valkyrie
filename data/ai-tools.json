@@ -103,5 +103,77 @@
     "isPaid": false,
     "isFreemium": false,
     "isOpenSource": true
+  },
+  {
+    "name": "Flux 1 DEV",
+    "description": "Flux is one of the most powerful image generation",
+    "tags": ["Design", "Image-generator"],
+    "url": "https://huggingface.co/spaces/black-forest-labs/FLUX.1-dev",
+    "isPaid": false,
+    "isFreemium": false,
+    "isOpenSource": true
+  },
+  {
+    "name": "Open O1",
+    "description": "Non-official O1 Open-source",
+    "tags": ["Text", "Conversation", "AI"],
+    "url": "https://huggingface.co/spaces/happzy2633/open-o1",
+    "isPaid": false,
+    "isFreemium": false,
+    "isOpenSource": true
+  },
+  {
+    "name": "Suno",
+    "description": "Most advanced AI Music Generator",
+    "tags": ["Music", "text-to-music"],
+    "url": "https://suno.com/",
+    "isPaid": false,
+    "isFreemium": true,
+    "isOpenSource": false
+  },
+  {
+    "name": "Claude 3.5 Sonnet",
+    "description": "An advanced LLM model designed by Anthropic that outperforms its competitors in reasoning, coding and image analysis.",
+    "tags": ["Text", "Conversation", "Code"],
+    "url": "https://claude.ai/",
+    "isPaid": false,
+    "isFreemium": true,
+    "isOpenSource": false
+  },
+  {
+    "name": "Adobe Firefly 3",
+    "description": "Powerful AI tools for easy image editing, generation and enhancement: image generator, generative fill, generative recolor, etc.",
+    "tags": ["Image"],
+    "url": "https://firefly.adobe.com/",
+    "isPaid": false,
+    "isFreemium": true,
+    "isOpenSource": false
+  },
+  {
+    "name": "Ideogram 2.0",
+    "description": "An image generator capable of creating impressive illustrations and integrating text. Ideal for creating logos, storyboards, advertising banners, etc.",
+    "tags": ["Image"],
+    "url": "https://ideogram.ai/",
+    "isPaid": false,
+    "isFreemium": true,
+    "isOpenSource": false
+  },
+  {
+    "name": "HeyGen",
+    "description": "Create a hyper-realistic AI avatar and make it speak from text. You can also do video translation and automatically clone your voice.",
+    "tags": ["Avatar", "Translation"],
+    "url": "https://www.heygen.com/",
+    "isPaid": false,
+    "isFreemium": true,
+    "isOpenSource": false
+  },
+  {
+    "name": "Pika 1.5",
+    "description": "A video generator that can produce fantastic videos via a simple text description.",
+    "tags": ["Video"],
+    "url": "https://pika.art/",
+    "isPaid": false,
+    "isFreemium": true,
+    "isOpenSource": false
   }
 ]
