@@ -5,14 +5,18 @@
     "tags": ["Text", "Conversation", "AI"],
     "url": "https://chat.openai.com/",
     "isPaid": false,
-    "isFreemium": true
+    "isFreemium": true,
+    "operatingSystems": ["Windows", "macOS", "iOS", "Android"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "DALL-E",
     "description": "AI system that creates images from textual descriptions",
     "tags": ["Image", "Generation", "AI"],
     "url": "https://openai.com/dall-e-3",
-    "isPaid": true
+    "isPaid": true,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Gemini",
@@ -20,7 +24,9 @@
     "tags": ["Multimodal", "AI", "Google"],
     "url": "https://deepmind.google/technologies/gemini/",
     "isPaid": false,
-    "isFreemium": true
+    "isFreemium": true,
+    "operatingSystems": ["Windows", "Android", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "V0",
@@ -28,7 +34,9 @@
     "tags": ["Code", "text"],
     "url": "https://v0.dev/chat/",
     "isPaid": false,
-    "isFreemium": true
+    "isFreemium": true,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "GPT Zero",
@@ -36,7 +44,10 @@
     "tags": ["Ai-Detector"],
     "url": "https://gptzero.me/",
     "isPaid": false,
-    "isFreemium": true
+    "isFreemium": false,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": true,
+    "isOpenSource": false
   },
   {
     "name": "Morphic",
@@ -44,7 +55,9 @@
     "tags": ["Text", "Search"],
     "url": "https://www.morphic.sh/",
     "isPaid": false,
-    "isFreemium": true
+    "isFreemium": true,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Runwayml",
@@ -52,7 +65,9 @@
     "tags": ["video", "text-to-video", "3d"],
     "url": "https://runwayml.com/",
     "isPaid": false,
-    "isFreemium": true
+    "isFreemium": true,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Stable Diffusion",
@@ -61,7 +76,9 @@
     "url": "https://stability.ai/stable-image",
     "isPaid": false,
     "isFreemium": false,
-    "isOpenSource": true
+    "isOpenSource": true,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Quillbot",
@@ -70,7 +87,9 @@
     "url": "https://quillbot.com/",
     "isPaid": false,
     "isOpenSource": false,
-    "isFreemium": true
+    "isFreemium": true,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Perplexity AI",
@@ -78,14 +97,18 @@
     "tags": ["Search", "Website"],
     "url": "htttps://perplexity.ai",
     "isPaid": true,
-    "isFreemium": false
+    "isFreemium": false,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Gamma AI",
     "description": "Aplicación Gamma es una herramienta potenciada por IA que crea presentaciones impresionantes, páginas web y documentos sin esfuerzo.",
     "tags": ["Powerpoint", "Website"],
     "url": "https://gamma.app",
-    "isPaid": true
+    "isPaid": true,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Qwen 2.5",
@@ -93,7 +116,9 @@
     "tags": ["Code", "Text"],
     "url": "https://huggingface.co/spaces/Qwen/Qwen2.5",
     "isPaid": false,
-    "isOpenSource": true
+    "isOpenSource": true,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Llama 3.2",
@@ -102,7 +127,9 @@
     "url": "https://groq.com/",
     "isPaid": false,
     "isFreemium": false,
-    "isOpenSource": true
+    "isOpenSource": true,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Flux 1 DEV",
@@ -111,7 +138,9 @@
     "url": "https://huggingface.co/spaces/black-forest-labs/FLUX.1-dev",
     "isPaid": false,
     "isFreemium": false,
-    "isOpenSource": true
+    "isOpenSource": true,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Open O1",
@@ -120,7 +149,9 @@
     "url": "https://huggingface.co/spaces/happzy2633/open-o1",
     "isPaid": false,
     "isFreemium": false,
-    "isOpenSource": true
+    "isOpenSource": true,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Suno",
@@ -129,7 +160,9 @@
     "url": "https://suno.com/",
     "isPaid": false,
     "isFreemium": true,
-    "isOpenSource": false
+    "isOpenSource": false,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Claude 3.5 Sonnet",
@@ -138,7 +171,9 @@
     "url": "https://claude.ai/",
     "isPaid": false,
     "isFreemium": true,
-    "isOpenSource": false
+    "isOpenSource": false,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Adobe Firefly 3",
@@ -147,7 +182,9 @@
     "url": "https://firefly.adobe.com/",
     "isPaid": false,
     "isFreemium": true,
-    "isOpenSource": false
+    "isOpenSource": false,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Ideogram 2.0",
@@ -156,7 +193,9 @@
     "url": "https://ideogram.ai/",
     "isPaid": false,
     "isFreemium": true,
-    "isOpenSource": false
+    "isOpenSource": false,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "HeyGen",
@@ -165,7 +204,9 @@
     "url": "https://www.heygen.com/",
     "isPaid": false,
     "isFreemium": true,
-    "isOpenSource": false
+    "isOpenSource": false,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
   },
   {
     "name": "Pika 1.5",
@@ -174,6 +215,85 @@
     "url": "https://pika.art/",
     "isPaid": false,
     "isFreemium": true,
-    "isOpenSource": false
+    "isOpenSource": false,
+    "operatingSystems": ["Windows", "macOS"],
+    "isFreeButNotOpenSource": false
+  },
+  {
+    "name": "AI Dubbing by ElevenLabs",
+    "description": "An amazing AI tool specially designed for voice dubbing and video translation. Works with ultra-realistic voices in over 60 languages",
+    "tags": ["Translation", "Audio"],
+    "url": "https://elevenlabs.io/dubbing",
+    "isPaid": false,
+    "isFreemium": true,
+    "isOpenSource": false,
+    "isFreeButNotOpenSource": false,
+    "operatingSystems": ["Windows", "macOS"]
+  },
+  {
+    "name": "Deepl",
+    "description": "The essential, high-quality translation tool",
+    "tags": ["Translation"],
+    "url": "https://www.deepl.com/es/translator",
+    "isPaid": false,
+    "isFreemium": false,
+    "isOpenSource": false,
+    "isFreeButNotOpenSource": true,
+    "operatingSystems": ["Windows", "macOS", "iOS", "Android"]
+  },
+  {
+    "name": "Character AI",
+    "description": "Chat with your favorite characters and discover the new possibilities of AI",
+    "tags": ["Chatbot"],
+    "url": "https://character.ai/",
+    "isPaid": false,
+    "isFreemium": false,
+    "isOpenSource": false,
+    "isFreeButNotOpenSource": true,
+    "operatingSystems": ["Windows", "macOS", "iOS", "Android"]
+  },
+  {
+    "name": "GitHub Copilot",
+    "description": "An AI co-pilot that can provide invaluable assistance to developers and programmers",
+    "tags": ["Coding"],
+    "url": "https://github.com/features/copilot",
+    "isPaid": true,
+    "isFreemium": false,
+    "isOpenSource": false,
+    "isFreeButNotOpenSource": false,
+    "operatingSystems": ["Windows", "macOS", "Linux"]
+  },
+  {
+    "name": "Codeium",
+    "description": "Drastically accelerate the way you code with AI and explode your productivity",
+    "tags": ["Coding"],
+    "url": "https://codeium.com/",
+    "isPaid": false,
+    "isFreemium": true,
+    "isOpenSource": false,
+    "isFreeButNotOpenSource": false,
+    "operatingSystems": ["Windows", "macOS", "Linux"]
+  },
+  {
+    "name": "Replit AI",
+    "description": "An AI-powered development platform for rapid coding, collaboration and deployment.",
+    "tags": ["Coding"],
+    "url": "https://replit.com/",
+    "isPaid": false,
+    "isFreemium": true,
+    "isOpenSource": false,
+    "isFreeButNotOpenSource": false,
+    "operatingSystems": ["Windows", "macOS"]
+  },
+  {
+    "name": "BlackBox AI",
+    "description": "Write your code 10 times faster with this assistant",
+    "tags": ["Coding"],
+    "url": "https://www.blackbox.ai/",
+    "isPaid": false,
+    "isFreemium": true,
+    "isOpenSource": false,
+    "isFreeButNotOpenSource": false,
+    "operatingSystems": ["Windows", "macOS", "Android"]
   }
 ]

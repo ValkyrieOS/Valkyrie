@@ -10,10 +10,11 @@
     <style>
         .tool-card {
             transition: all 0.3s ease;
+            content-visibility: auto;
         }
 
         .tool-card:hover {
-            transform: translateY(-5px);
+            background-color: #2A2A2A;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
@@ -30,13 +31,13 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#6C63FF",
-                        secondary: "#FF6584",
-                        tertiary: "#38B2AC",
+                        primary: "#8B5CF6",
+                        secondary: "#EC4899",
+                        tertiary: "#10B981",
                         dark: {
-                            100: "#1E1E1E",
-                            200: "#2D2D2D",
-                            300: "#3C3C3C",
+                            100: "#121212",
+                            200: "#1E1E1E",
+                            300: "#2A2A2A",
                         },
                     },
                 },
@@ -46,12 +47,12 @@
 </head>
 
 <body class="bg-dark-100 text-gray-200 min-h-screen flex flex-col transition-colors duration-200">
-    <header class="bg-dark-200 text-white shadow-lg">
-        <div class="container mx-auto px-4 py-6">
+    <header class="bg-dark-200 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center space-x-4 mb-4 md:mb-0">
                     <h1 class="text-4xl font-bold text-primary">AI Library</h1>
-                    <span class="text-sm font-medium bg-dark-300 text-primary px-2 py-1 rounded-full">v1.2</span>
+                    <span class="text-sm font-medium bg-dark-300 text-primary px-2 py-1 rounded-full">v1.2.1</span>
                 </div>
                 <div class="flex items-center space-x-4">
                     <div class="relative">
@@ -64,7 +65,7 @@
         </div>
     </header>
 
-    <nav class="bg-dark-200 shadow-md py-4 sticky top-0 z-10">
+    <nav class="bg-dark-200 shadow-md py-4 sticky top-16 z-40">
         <div class="container mx-auto px-4">
             <div class="flex justify-center space-x-2">
                 <button id="all-filter"
@@ -105,23 +106,23 @@
             aiToolsContainer.innerHTML = '';
             aiToolsCount.textContent = `Showing ${tools.length} AI tool${tools.length !== 1 ? 's' : ''}`;
 
-            tools.forEach((tool, index) => {
+            tools.forEach((tool) => {
                 const toolElement = document.createElement("div");
                 toolElement.className = "tool-card bg-dark-200 rounded-lg overflow-hidden shadow-lg border border-dark-300";
-                toolElement.style.animation = `fadeIn 0.5s ease-out ${index * 0.1}s both`;
                 toolElement.innerHTML = `
-                    <div class="p-5">
-                        <div class="flex justify-between items-start mb-3">
-                            <h2 class="text-xl font-semibold text-white">${tool.name}</h2>
-                            <span class="px-2 py-1 rounded text-xs font-semibold ${getPricingClass(tool)}">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold text-primary">${tool.name}</h2>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold ${getPricingClass(tool)}">
                                 ${getPricingLabel(tool)}
                             </span>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4">${tool.description}</p>
+                        <p class="text-gray-300 text-sm mb-4">${tool.description}</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            ${tool.tags.map(tag => `<span class="bg-dark-300 text-gray-300 text-xs px-2 py-1 rounded">${tag}</span>`).join('')}
+                            ${tool.tags.map(tag => `<span class="bg-dark-300 text-gray-300 text-xs px-2 py-1 rounded-full">${tag}</span>`).join('')}
                         </div>
-                        <div class="flex justify-end items-center">
+                        ${renderOperatingSystems(tool)}
+                        <div class="flex justify-end items-center mt-4">
                             <a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-primary hover:bg-opacity-90 text-white text-sm rounded-full transition-colors">
                                 Visit <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
@@ -130,6 +131,25 @@
                 `;
                 aiToolsContainer.appendChild(toolElement);
             });
+        }
+
+        function renderOperatingSystems(tool) {
+            if (!tool.operatingSystems || tool.operatingSystems.length === 0) {
+                return '';
+            }
+
+            if (tool.operatingSystems.length === 1) {
+                return `<p class="text-gray-400 text-sm mb-4"><i class="fas fa-desktop mr-2"></i>${tool.operatingSystems[0]} only</p>`;
+            }
+
+            return `
+                <div class="mb-4">
+                    <p class="text-gray-400 text-sm mb-2"><i class="fas fa-desktop mr-2"></i>Operating Systems:</p>
+                    <div class="flex flex-wrap gap-2">
+                        ${tool.operatingSystems.map(os => `<span class="bg-dark-300 text-gray-300 text-xs px-2 py-1 rounded-full">${os}</span>`).join('')}
+                    </div>
+                </div>
+            `;
         }
 
         function getPricingClass(tool) {
