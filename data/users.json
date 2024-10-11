@@ -2,7 +2,7 @@
   {
     "id": "1726426187152",
     "name": "Glazzier",
-    "balance": 702,
+    "balance": 777,
     "transactions": [
       {
         "id": "1726426403739",
@@ -103,6 +103,25 @@
         "date": "2024-09-20T20:32:43.437Z",
         "sender": "Glazzier",
         "receiver": "Sistema"
+      },
+      {
+        "id": "1728646836674",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.674Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": -49,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 119,
+        "description": "Received tax collection",
+        "date": "2024-10-11T11:44:55.477Z"
       }
     ],
     "rank": "Founder"
@@ -110,7 +129,7 @@
   {
     "id": "1726429782746",
     "name": "Yiede",
-    "balance": 500,
+    "balance": 470,
     "transactions": [
       {
         "id": "1726727251757",
@@ -119,6 +138,19 @@
         "date": "2024-09-19T06:27:31.757Z",
         "sender": "Sistema",
         "receiver": "Yiede"
+      },
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": -35,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
       }
     ],
     "rank": "Owner"
@@ -126,7 +158,7 @@
   {
     "id": "1726429974789",
     "name": "ZzZz",
-    "balance": 270,
+    "balance": 256,
     "transactions": [
       {
         "id": "1726467219894",
@@ -143,6 +175,19 @@
         "date": "2024-09-19T06:27:31.757Z",
         "sender": "Sistema",
         "receiver": "ZzZz"
+      },
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": -19,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
       }
     ],
     "rank": "Manager"
@@ -150,7 +195,7 @@
   {
     "id": "1726430035073",
     "name": "Hades",
-    "balance": 33,
+    "balance": 36,
     "transactions": [
       {
         "id": "1726431828838",
@@ -189,6 +234,19 @@
         "date": "2024-09-21T20:58:18.338Z",
         "sender": "Hades",
         "receiver": "Sistema"
+      },
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": -2,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
       }
     ],
     "rank": "Sr.Mod"
@@ -196,7 +254,7 @@
   {
     "id": "1726430048236",
     "name": "Aflac12",
-    "balance": 50,
+    "balance": 52,
     "transactions": [
       {
         "id": "1726727251757",
@@ -205,6 +263,19 @@
         "date": "2024-09-19T06:27:31.757Z",
         "sender": "Sistema",
         "receiver": "Aflac12"
+      },
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": -3,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
       }
     ],
     "rank": "Mod"
@@ -212,7 +283,7 @@
   {
     "id": "1726485784885",
     "name": "Nova",
-    "balance": 250,
+    "balance": 238,
     "transactions": [
       {
         "id": "1726727251757",
@@ -221,6 +292,19 @@
         "date": "2024-09-19T06:27:31.757Z",
         "sender": "Sistema",
         "receiver": "Nova"
+      },
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": -17,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
       }
     ],
     "rank": "Manager"
@@ -228,7 +312,7 @@
   {
     "id": "1726513454782",
     "name": "carlos0195",
-    "balance": 10,
+    "balance": 14,
     "transactions": [
       {
         "id": "1726513538700",
@@ -237,6 +321,19 @@
         "date": "2024-09-16T19:05:38.700Z",
         "sender": "Glazzier",
         "receiver": "carlos0195"
+      },
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": -1,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
       }
     ],
     "rank": "Miembro"
@@ -244,7 +341,7 @@
   {
     "id": "1726581506149",
     "name": "sksgnd",
-    "balance": 10,
+    "balance": 14,
     "transactions": [
       {
         "id": "1726581524129",
@@ -253,6 +350,19 @@
         "date": "2024-09-17T13:58:44.129Z",
         "sender": "Glazzier",
         "receiver": "sksgnd"
+      },
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": -1,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
       }
     ],
     "rank": "Miembro"
@@ -260,7 +370,7 @@
   {
     "id": "1726661455476",
     "name": "MagmaCube200",
-    "balance": 46,
+    "balance": 48,
     "transactions": [
       {
         "id": "1726662206342",
@@ -309,6 +419,19 @@
         "date": "2024-09-20T19:55:36.682Z",
         "sender": "MagmaCube200",
         "receiver": "Sistema"
+      },
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": -3,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
       }
     ],
     "rank": "Miembro"
@@ -316,7 +439,7 @@
   {
     "id": "1726670016247",
     "name": "dariooo13pbl",
-    "balance": 2,
+    "balance": 7,
     "transactions": [
       {
         "id": "1726670048404",
@@ -325,6 +448,19 @@
         "date": "2024-09-18T14:34:08.404Z",
         "sender": "Glazzier",
         "receiver": "dariooo13pbl"
+      },
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
       }
     ],
     "rank": "Miembro"
@@ -332,813 +468,2437 @@
   {
     "id": "1727000000001",
     "name": "rump",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000002",
     "name": "unaicd_",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000003",
     "name": "frikinillo",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000004",
     "name": "ELMACHADO",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000005",
     "name": "Gogojumbo",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000006",
     "name": "darpion",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000007",
     "name": "Ian",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000008",
     "name": "laylaa_thebaddest❤",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000009",
     "name": "Abrahamdavid",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000010",
     "name": "🕸",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000011",
     "name": "CARLO.CAKE_YT",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000012",
     "name": "cannyt_nautic",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000013",
     "name": "topete",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000014",
     "name": "Mitogp120",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000015",
     "name": "el_paberlo08",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000016",
     "name": "Amine",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000017",
     "name": "[°SPLAYER_MAYER°]",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000018",
     "name": "Hernan",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000019",
     "name": "🙀𝘈𝘥𝘭𝘺𝘗𝘪𝘯𝘬😻",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000020",
     "name": "emiliozz23_83346",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000021",
     "name": "Joaquin",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000022",
     "name": "mery <3",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000023",
     "name": "Osorio",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000024",
     "name": "nitrox345",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000025",
     "name": "Adri2011_as",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000026",
     "name": "sofi",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000027",
     "name": "Santiago",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000028",
     "name": "__👑 SEBASTIAN 👑__✔",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000029",
     "name": "Mateo",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000030",
     "name": "Soyinzano 👻",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000031",
     "name": "Agoney",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000032",
     "name": "Matheo",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000033",
     "name": "juan.parra456",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000034",
     "name": "raul",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000035",
     "name": "Edison",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000036",
     "name": "GuilleSB",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000037",
     "name": "Michi",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000038",
     "name": "🖤EgoBall📴",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000039",
     "name": "DK| 80 | UdayTps",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000040",
     "name": "PABLITO-10",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000041",
     "name": "𝙱 𝙲 𝙲 𝙾",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000042",
     "name": "Yadelito",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000043",
     "name": "Virus 2300",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000044",
     "name": "nvpro12246",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000045",
     "name": "! Curse Dust",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000046",
     "name": "bored",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000047",
     "name": "RubenChuGD",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000048",
     "name": "duendecito",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000049",
     "name": "C11_luispt",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000050",
     "name": "juanvalax",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000051",
     "name": "XxBeny373_JD",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000052",
     "name": "PARAPAPAPAP",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000053",
     "name": "narezan",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000054",
     "name": "andru",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000055",
     "name": "•.¸♡ 𝓜𝓾𝓵𝓮𝔁𝓲𝓽𝓪 ♡¸.•",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000056",
     "name": "lukas210810l",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000057",
     "name": "Ru navideño 🎄✨",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000058",
     "name": "Marcos F R Games",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000059",
     "name": "dimogi",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000060",
     "name": "ElAnastasioGG",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000061",
     "name": "BPER",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000062",
     "name": "juanpe207",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000063",
     "name": "mrsnorlax",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000064",
     "name": "ʙᴇɴᴊᴀ",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000065",
     "name": "RexPie",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000066",
     "name": "multyplayer84",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000067",
     "name": "09_🅼🆄🆂🆃🅰",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000068",
     "name": "LARATA300(POL)",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000069",
     "name": "SR MODERADOR FINO",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Admin"
   },
   {
     "id": "1727000000070",
     "name": "ㅅ𝕱𝖑𝖆𝖒𝖒𝖊 ，﹙🪐﹚",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000071",
     "name": "Andy.bermudez",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000072",
     "name": "𖤍 • Stellar",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000073",
     "name": "denma",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000074",
     "name": "VaLLoP",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000075",
     "name": "Luka!",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000076",
     "name": "𝓙h̶iper☠",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000077",
     "name": "to__mas_okk",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000078",
     "name": "isai",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000079",
     "name": "Ale",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000080",
     "name": "𝓝𝓸𝓻𝓪",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Amig@"
   },
   {
     "id": "1727000000081",
     "name": "Todo prendio",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000082",
     "name": "Un NPC cualquiera.",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000083",
     "name": "Sentiel",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000084",
     "name": "zAlejandrito",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000085",
     "name": "Itzmessi10",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000086",
     "name": "Elkin08 🇪🇨 🌐🕹",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000087",
     "name": "Josegamer",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000088",
     "name": "y1suss_",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000089",
     "name": "J4VY3R",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000090",
     "name": "dd",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000091",
     "name": "Noobmaster69",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000092",
     "name": "Facnir32",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000093",
     "name": "EmilioElCrack",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000094",
     "name": "JhosepCraft_YT",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000095",
     "name": "400",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000096",
     "name": "☪𝑴𝒐𝒏𝒐𝒕𝒖𝒔 𝑿☪",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000097",
     "name": "BerKana",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000098",
     "name": "「YT」 bobnite",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000099",
     "name": "OnlyJul",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000100",
     "name": "Raid___",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000101",
     "name": "MTK-GAEL",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000102",
     "name": "Tornillo Oxidado",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000103",
     "name": "adriiroomeroo24",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000104",
     "name": "T3 KA",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000105",
     "name": "farnat",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Amig@"
   },
   {
     "id": "1727000000106",
     "name": "𝕊𝔸ℕ𝕋𝕀",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000107",
     "name": "brajos123",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000108",
     "name": "𝕻𝖆𝖛𝖎𝖌𝖆",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000109",
     "name": "Pharras,Floridian Cat",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000110",
     "name": "EastShark1",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000111",
     "name": "Xris23",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000112",
     "name": "oxi",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000113",
     "name": "soychope",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000114",
     "name": "[K♠]Jin",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   },
   {
     "id": "1727000000115",
     "name": "TuPapiXulo69",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Amig@"
   },
   {
     "id": "1727000000116",
     "name": "✯ Gαrtℓoη ✯",
-    "balance": 0,
-    "transactions": [],
+    "balance": 5,
+    "transactions": [
+      {
+        "id": "1728646836675",
+        "amount": 5,
+        "description": "Global amount added",
+        "date": "2024-10-11T11:40:36.675Z"
+      },
+      {
+        "id": "1728647095477",
+        "amount": 0,
+        "description": "Tax collection (7%)",
+        "date": "2024-10-11T11:44:55.477Z",
+        "receiver": "1726426187152"
+      }
+    ],
     "rank": "Miembro"
   }
 ]
