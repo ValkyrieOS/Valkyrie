@@ -2,7 +2,7 @@
   "2024-10-11": {
     "Mejoras": {
       "estado": "Trabajando",
-      "porcentaje": 5,
+      "porcentaje": 10,
       "descripcion": "Mejora de diseño de Discord",
       "fechaReporte": "2024-10-11"
     }
@@ -10,7 +10,7 @@
   "2024-10-09": {
     "Novedad": {
       "estado": "Trabajando",
-      "porcentaje": 15,
+      "porcentaje": 30,
       "descripcion": "Valkyrie 1.3.2",
       "fechaReporte": "2024-10-09"
     }
