@@ -12,34 +12,37 @@
         theme: {
           extend: {
             colors: {
-              "dark-bg": "#121212",
-              "dark-card": "#1E1E1E",
+              "dark-bg": "#0f172a",
+              "dark-card": "#1e293b",
+              accent: "#60a5fa",
             },
           },
         },
       };
     </script>
   </head>
-  <body class="bg-dark-bg text-gray-200 min-h-screen">
-    <div class="container mx-auto px-4 py-8">
-      <h1 class="text-5xl font-bold mb-12 text-center text-gray-100">
+  <body class="bg-dark-bg text-gray-200 min-h-screen font-sans">
+    <div class="container mx-auto px-4 py-12">
+      <h1
+        class="text-6xl font-extrabold mb-16 text-center text-accent bg-clip-text text-transparent bg-gradient-to-r from-accent to-purple-500"
+      >
         Valkyrie Status
       </h1>
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-8">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 mb-12">
         <div
           id="active-states"
-          class="lg:col-span-1 bg-dark-card rounded-xl shadow-lg p-6 border border-gray-700"
+          class="lg:col-span-1 bg-dark-card rounded-2xl shadow-xl p-8 border border-gray-700 hover:border-accent transition duration-300"
         >
-          <h2 class="text-2xl font-semibold mb-6 text-gray-100">
+          <h2 class="text-3xl font-bold mb-8 text-accent">
             Estados en Progreso
           </h2>
-          <div id="active-states-list" class="space-y-4">
+          <div id="active-states-list" class="space-y-6">
             <!-- Los estados activos se cargarán aquí dinámicamente -->
           </div>
         </div>
         <div
           id="status-container"
-          class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-8"
+          class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-10"
         >
           <!-- Los estados se cargarán aquí dinámicamente -->
         </div>
@@ -62,26 +65,26 @@
       function createStatusCard(fecha, estados) {
         const card = document.createElement("div");
         card.className =
-          "bg-dark-card rounded-xl shadow-lg p-6 border border-gray-700 transition-all duration-300 hover:shadow-xl hover:border-gray-600";
+          "bg-dark-card rounded-2xl shadow-xl p-8 border border-gray-700 transition-all duration-300 hover:shadow-2xl hover:border-accent";
         card.id = `card-${fecha}`;
         card.innerHTML = `
-                <h2 class="text-2xl font-semibold mb-6 text-gray-100">${dayjs(
+                <h2 class="text-3xl font-bold mb-8 text-accent">${dayjs(
                   fecha
                 ).format("DD/MM/YYYY")}</h2>
-                <div class="space-y-6">
+                <div class="space-y-8">
                     ${Object.entries(estados)
                       .map(
                         ([estado, info]) => `
-                        <div class="space-y-2">
+                        <div class="space-y-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center">
-                                    <div class="w-4 h-4 ${
+                                    <div class="w-5 h-5 ${
                                       statusColors[estado]
-                                    } rounded-sm mr-2"></div>
-                                    <span class="font-medium text-lg">${estado}</span>
+                                    } rounded-md mr-3"></div>
+                                    <span class="font-semibold text-xl">${estado}</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="w-3 h-3 ${
+                                    <div class="w-4 h-4 ${
                                       stateColors[info.estado]
                                     } rounded-full mr-2"></div>
                                     <span class="text-sm font-medium">${
@@ -89,23 +92,23 @@
                                     }</span>
                                 </div>
                             </div>
-                            <div class="ml-6">
-                                <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2">
+                            <div class="ml-8">
+                                <div class="w-full bg-gray-700 rounded-full h-3 mb-3">
                                     <div class="${
                                       statusColors[estado]
-                                    } h-2.5 rounded-full transition-all duration-500" style="width: ${
+                                    } h-3 rounded-full transition-all duration-500 ease-out" style="width: ${
                           info.porcentaje
                         }%"></div>
                                 </div>
-                                <p class="text-sm text-gray-400">${
+                                <p class="text-sm text-gray-300">${
                                   info.descripcion
                                 }</p>
-                                <p class="text-xs text-gray-500 mt-1">Reportado: ${dayjs(
+                                <p class="text-xs text-gray-400 mt-2">Reportado: ${dayjs(
                                   info.fechaReporte
                                 ).format("DD/MM/YYYY")}</p>
                                 ${
                                   info.fechaCompletado
-                                    ? `<p class="text-xs text-gray-500">Completado: ${dayjs(
+                                    ? `<p class="text-xs text-gray-400">Completado: ${dayjs(
                                         info.fechaCompletado
                                       ).format("DD/MM/YYYY")}</p>`
                                     : ""
@@ -129,19 +132,21 @@
             if (info.estado === "Trabajando") {
               const stateElement = document.createElement("div");
               stateElement.className =
-                "flex items-center justify-between p-3 bg-dark-bg rounded-lg transition-all duration-300 hover:bg-gray-800 cursor-pointer";
+                "flex items-center justify-between p-4 bg-dark-bg rounded-xl transition-all duration-300 hover:bg-gray-800 cursor-pointer";
               stateElement.innerHTML = `
                             <div class="flex items-center">
-                                <div class="w-3 h-3 ${
+                                <div class="w-4 h-4 ${
                                   statusColors[estado]
-                                } rounded-sm mr-2"></div>
+                                } rounded-md mr-3"></div>
                                 <span class="text-sm font-medium">${estado}</span>
                             </div>
                             <div class="flex items-center">
-                                <div class="w-2 h-2 ${
+                                <div class="w-3 h-3 ${
                                   stateColors[info.estado]
                                 } rounded-full mr-2"></div>
-                                <span class="text-xs">${info.porcentaje}%</span>
+                                <span class="text-xs font-semibold">${
+                                  info.porcentaje
+                                }%</span>
                             </div>
                         `;
               stateElement.addEventListener("click", () => {
@@ -150,9 +155,9 @@
                 );
                 if (targetCard) {
                   targetCard.scrollIntoView({ behavior: "smooth" });
-                  targetCard.classList.add("ring-2", "ring-blue-500");
+                  targetCard.classList.add("ring-4", "ring-accent");
                   setTimeout(() => {
-                    targetCard.classList.remove("ring-2", "ring-blue-500");
+                    targetCard.classList.remove("ring-4", "ring-accent");
                   }, 2000);
                 }
               });
