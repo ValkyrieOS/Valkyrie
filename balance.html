@@ -1,260 +1,295 @@
 <!DOCTYPE html>
 <html lang="es" class="dark">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VALCOIN User Dashboard v1.0.8</title>
+    <title>VALCOIN User Dashboard v2.0.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#4F46E5",
-              secondary: "#10B981",
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#4F46E5",
+                        secondary: "#10B981",
+                    },
+                },
             },
-          },
-        },
-      };
+        };
     </script>
     <style>
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        to {
-          opacity: 1;
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
         }
-      }
-      .animate-fade-in {
-        animation: fadeIn 0.5s ease-out forwards;
-      }
-      .content-visibility-auto {
-        content-visibility: auto;
-      }
+        .content-visibility-auto {
+            content-visibility: auto;
+        }
     </style>
-  </head>
+</head>
 
-  <body class="bg-gray-900 text-white min-h-screen">
+<body class="bg-gray-900 text-white min-h-screen">
     <div class="container mx-auto px-4 py-8">
-      <header class="text-center mb-8">
-        <h1 class="text-4xl font-bold mb-2 text-primary">
-          VALCOIN User Dashboard
-        </h1>
-        <p class="text-xl text-gray-400">Versión 1.0.8</p>
-      </header>
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold mb-2 text-primary">VALCOIN User Dashboard</h1>
+            <p class="text-xl text-gray-400">Versión 2.0.0</p>
+        </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div id="userCounter" class="bg-gray-800 p-6 rounded-lg shadow-lg">
-          <h2 class="text-xl font-bold mb-2 text-secondary">
-            Total de Usuarios
-          </h2>
-          <p class="text-3xl font-bold">0</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div id="userCounter" class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-2 text-secondary">Total de Usuarios</h2>
+                <p class="text-3xl font-bold">0</p>
+            </div>
+            <div id="totalValcoin" class="bg-gray-800 p-6 rounded-lg shadow-lg md:col-span-2">
+                <h2 class="text-xl font-bold mb-2 text-secondary">Total de VALCOIN</h2>
+                <p class="text-3xl font-bold mb-2">0 VALCOIN</p>
+                <div class="flex justify-between text-lg">
+                    <p>€0.00</p>
+                    <p>$0.00</p>
+                </div>
+            </div>
         </div>
-        <div id="totalValcoin" class="bg-gray-800 p-6 rounded-lg shadow-lg">
-          <h2 class="text-xl font-bold mb-2 text-secondary">
-            Total de VALCOIN
-          </h2>
-          <p class="text-3xl font-bold mb-2">0 VALCOIN</p>
-          <div class="flex justify-between text-lg">
-            <p>€0.00</p>
-            <p>$0.00</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="flex flex-col md:flex-row gap-6 mb-8">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Buscar usuario..."
-          class="flex-grow p-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-        />
-        <select
-          id="currencySelect"
-          class="p-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-        >
-          <option value="EUR">EUR (€)</option>
-          <option value="USD">USD ($)</option>
-        </select>
-      </div>
+        <div class="flex flex-col md:flex-row gap-6 mb-8">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Buscar usuario..."
+                class="flex-grow p-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            <select
+                id="currencySelect"
+                class="p-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+                <option value="EUR">EUR (€)</option>
+                <option value="USD">USD ($)</option>
+            </select>
+            <select
+                id="sortSelect"
+                class="p-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+                <option value="balance">Ordenar por Balance</option>
+                <option value="name">Ordenar por Nombre</option>
+                <option value="rank">Ordenar por Rango</option>
+            </select>
+        </div>
 
-      <div class="flex flex-col md:flex-row gap-6">
-        <div
-          id="userList"
-          class="w-full md:w-1/3 space-y-4 overflow-y-auto max-h-screen pr-4"
-        >
-          <!-- User list will be populated here -->
+        <div class="flex flex-col lg:flex-row gap-6">
+            <div id="userList" class="w-full lg:w-1/3 space-y-4 overflow-y-auto max-h-screen pr-4">
+                <!-- User list will be populated here -->
+            </div>
+            <div id="userDetails" class="w-full lg:w-2/3 bg-gray-800 p-6 rounded-lg hidden">
+                <!-- User details will be shown here when a user is clicked -->
+            </div>
         </div>
-        <div
-          id="userDetails"
-          class="w-full md:w-2/3 bg-gray-800 p-6 rounded-lg hidden"
-        >
-          <!-- User details will be shown here when a user is clicked -->
+
+        <div class="mt-8 bg-gray-800 p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 text-secondary">Estadísticas Globales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <canvas id="balanceDistributionChart"></canvas>
+                </div>
+                <div>
+                    <canvas id="rankDistributionChart"></canvas>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <script>
-      function convertValcoin(amount, currency) {
-        const euroValue = amount / 1000;
-        return currency === "USD"
-          ? (euroValue * 1.2).toFixed(2)
-          : euroValue.toFixed(2);
-      }
+        let users = [];
 
-      function getRankColor(rank) {
-        const colors = {
-          Founder: "text-pink-500",
-          Owner: "text-red-500",
-          "Co-Owner": "text-orange-500",
-          "Guild Manager": "text-purple-500",
-          "Head Manager": "text-indigo-500",
-          Manager: "text-blue-500",
-          "Sr.Admin": "text-cyan-500",
-          Admin: "text-teal-500",
-          "Sr.Mod": "text-green-500",
-          Mod: "text-lime-500",
-          Helper: "text-yellow-500",
-          Soporte: "text-amber-500",
-          Postulante: "text-gray-400",
-          Miembro: "text-gray-500",
-        };
-        return colors[rank] || "text-gray-500";
-      }
+        function convertValcoin(amount, currency) {
+            const euroValue = amount / 1000;
+            return currency === "USD" ? (euroValue * 1.2).toFixed(2) : euroValue.toFixed(2);
+        }
 
-      function getBalanceColor(balance) {
-        if (balance < 1000) return "text-red-500";
-        if (balance < 5000) return "text-yellow-500";
-        if (balance < 10000) return "text-green-500";
-        return "text-blue-500";
-      }
+        function getRankColor(rank) {
+            const colors = {
+                Founder: "text-pink-500",
+                Owner: "text-red-500",
+                "Co-Owner": "text-orange-500",
+                "Guild Manager": "text-purple-500",
+                "Head Manager": "text-indigo-500",
+                Manager: "text-blue-500",
+                "Sr.Admin": "text-cyan-500",
+                Admin: "text-teal-500",
+                "Sr.Mod": "text-green-500",
+                Mod: "text-lime-500",
+                Helper: "text-yellow-500",
+                Soporte: "text-amber-500",
+                Postulante: "text-gray-400",
+                Miembro: "text-gray-500",
+            };
+            return colors[rank] || "text-gray-500";
+        }
 
-      function showUserDetails(user) {
-        const userDetails = document.getElementById("userDetails");
-        const currency = document.getElementById("currencySelect").value;
-        const currencySymbol = currency === "USD" ? "$" : "€";
-        const balanceColor = getBalanceColor(user.balance);
-        const rankColor = getRankColor(user.rank);
+        function getBalanceColor(balance) {
+            if (balance < 1000) return "text-red-500";
+            if (balance < 5000) return "text-yellow-500";
+            if (balance < 10000) return "text-green-500";
+            return "text-blue-500";
+        }
 
-        userDetails.innerHTML = `
-                <h2 class="text-2xl font-bold mb-4">${
-                  user.name
-                } <span class="${rankColor}">(${user.rank})</span></h2>
-                <p class="text-xl ${balanceColor} mb-2">${
-          user.balance
-        } VALCOIN</p>
-                <p class="text-lg text-green-400 mb-4">${currencySymbol}${convertValcoin(
-          user.balance,
-          currency
-        )}</p>
+        function showUserDetails(user) {
+            const userDetails = document.getElementById("userDetails");
+            const currency = document.getElementById("currencySelect").value;
+            const currencySymbol = currency === "USD" ? "$" : "€";
+            const balanceColor = getBalanceColor(user.balance);
+            const rankColor = getRankColor(user.rank);
+
+            userDetails.innerHTML = `
+                <h2 class="text-2xl font-bold mb-4">${user.name} <span class="${rankColor}">(${user.rank})</span></h2>
+                <p class="text-xl ${balanceColor} mb-2">${user.balance} VALCOIN</p>
+                <p class="text-lg text-green-400 mb-4">${currencySymbol}${convertValcoin(user.balance, currency)}</p>
                 <p class="text-sm text-gray-400 mb-4">ID: ${user.id}</p>
                 <h3 class="font-bold mb-2 text-lg text-secondary">Historial de Transacciones:</h3>
                 <ul class="space-y-2 max-h-96 overflow-y-auto">
-                    ${user.transactions
-                      .map(
-                        (t) => `
+                    ${user.transactions.map(t => `
                         <li class="bg-gray-700 p-3 rounded">
                             <div class="flex justify-between items-center mb-1">
-                                <span class="${
-                                  t.amount > 0
-                                    ? "text-green-400"
-                                    : "text-red-400"
-                                }">${t.amount} VALCOIN</span>
-                                <span class="text-xs text-gray-400">${new Date(
-                                  t.date
-                                ).toLocaleString()}</span>
+                                <span class="${t.amount > 0 ? "text-green-400" : "text-red-400"}">${t.amount} VALCOIN</span>
+                                <span class="text-xs text-gray-400">${new Date(t.date).toLocaleString()}</span>
                             </div>
                             <p class="text-sm">${t.description}</p>
                             <p class="text-xs text-gray-400 mt-1">
-                                ${
-                                  t.amount > 0
-                                    ? `De: ${t.sender || "Sistema"}`
-                                    : `A: ${t.receiver || "Sistema"}`
-                                }
+                                ${t.amount > 0 ? `De: ${t.sender || "Sistema"}` : `A: ${t.receiver || "Sistema"}`}
                             </p>
                         </li>
-                    `
-                      )
-                      .join("")}
+                    `).join("")}
                 </ul>
             `;
 
-        userDetails.classList.remove("hidden");
-      }
-
-      async function loadUsers() {
-        try {
-          const response = await fetch("data/users.json");
-          const users = await response.json();
-          const userList = document.getElementById("userList");
-          const currency = document.getElementById("currencySelect").value;
-          userList.innerHTML = "";
-
-          let totalValcoin = 0;
-
-          users.forEach((user, index) => {
-            totalValcoin += user.balance;
-
-            const userCard = document.createElement("div");
-            userCard.className = `bg-gray-800 p-4 rounded-lg shadow transition-all duration-300 hover:shadow-lg hover:bg-gray-700 animate-fade-in opacity-0 content-visibility-auto cursor-pointer`;
-            userCard.style.animationDelay = `${index * 50}ms`;
-
-            const rankColor = getRankColor(user.rank);
-            const balanceColor = getBalanceColor(user.balance);
-
-            userCard.innerHTML = `
-                        <h3 class="text-lg font-semibold mb-1">${user.name}</h3>
-                        <p class="${rankColor} text-sm mb-2">${user.rank}</p>
-                        <p class="${balanceColor} font-bold">${user.balance} VALCOIN</p>
-                    `;
-
-            userCard.addEventListener("click", () => showUserDetails(user));
-            userList.appendChild(userCard);
-          });
-
-          document
-            .getElementById("userCounter")
-            .querySelector("p").textContent = users.length;
-          const totalValcoinElement = document.getElementById("totalValcoin");
-          totalValcoinElement.querySelector(
-            "p:first-of-type"
-          ).textContent = `${totalValcoin} VALCOIN`;
-          totalValcoinElement.querySelectorAll(
-            "p"
-          )[1].textContent = `€${convertValcoin(totalValcoin, "EUR")}`;
-          totalValcoinElement.querySelectorAll(
-            "p"
-          )[2].textContent = `$${convertValcoin(totalValcoin, "USD")}`;
-        } catch (error) {
-          console.error("Error al cargar los usuarios:", error);
+            userDetails.classList.remove("hidden");
         }
-      }
 
-      function filterUsers() {
-        const searchTerm = document
-          .getElementById("searchInput")
-          .value.toLowerCase();
-        const userCards = document.querySelectorAll("#userList > div");
+        async function loadUsers() {
+            try {
+                const response = await fetch("data/users.json");
+                users = await response.json();
+                updateUserList();
+                updateGlobalStats();
+            } catch (error) {
+                console.error("Error al cargar los usuarios:", error);
+            }
+        }
 
-        userCards.forEach((card) => {
-          const userName = card.querySelector("h3").textContent.toLowerCase();
-          if (userName.includes(searchTerm)) {
-            card.style.display = "block";
-          } else {
-            card.style.display = "none";
-          }
-        });
-      }
+        function updateUserList() {
+            const userList = document.getElementById("userList");
+            const currency = document.getElementById("currencySelect").value;
+            const sortBy = document.getElementById("sortSelect").value;
+            const searchTerm = document.getElementById("searchInput").value.toLowerCase();
 
-      loadUsers();
-      document
-        .getElementById("currencySelect")
-        .addEventListener("change", loadUsers);
-      document
-        .getElementById("searchInput")
-        .addEventListener("input", filterUsers);
+            userList.innerHTML = "";
+
+            let totalValcoin = 0;
+
+            const sortedUsers = [...users].sort((a, b) => {
+                if (sortBy === "balance") return b.balance - a.balance;
+                if (sortBy === "name") return a.name.localeCompare(b.name);
+                if (sortBy === "rank") return a.rank.localeCompare(b.rank);
+                return 0;
+            });
+
+            sortedUsers.forEach((user, index) => {
+                if (!user.name.toLowerCase().includes(searchTerm)) return;
+
+                totalValcoin += user.balance;
+
+                const userCard = document.createElement("div");
+                userCard.className = `bg-gray-800 p-4 rounded-lg shadow transition-all duration-300 hover:shadow-lg hover:bg-gray-700 animate-fade-in opacity-0 content-visibility-auto cursor-pointer`;
+                userCard.style.animationDelay = `${index * 50}ms`;
+
+                const rankColor = getRankColor(user.rank);
+                const balanceColor = getBalanceColor(user.balance);
+
+                userCard.innerHTML = `
+                    <h3 class="text-lg font-semibold mb-1">${user.name}</h3>
+                    <p class="${rankColor} text-sm mb-2">${user.rank}</p>
+                    <p class="${balanceColor} font-bold">${user.balance} VALCOIN</p>
+                `;
+
+                userCard.addEventListener("click", () => showUserDetails(user));
+                userList.appendChild(userCard);
+            });
+
+            document.getElementById("userCounter").querySelector("p").textContent = users.length;
+            const totalValcoinElement = document.getElementById("totalValcoin");
+            totalValcoinElement.querySelector("p:first-of-type").textContent = `${totalValcoin} VALCOIN`;
+            totalValcoinElement.querySelectorAll("p")[1].textContent = `€${convertValcoin(totalValcoin, "EUR")}`;
+            totalValcoinElement.querySelectorAll("p")[2].textContent = `$${convertValcoin(totalValcoin, "USD")}`;
+        }
+
+        function updateGlobalStats() {
+            const balanceRanges = [
+                { min: 0, max: 1000, label: "0-1000" },
+                { min: 1001, max: 5000, label: "1001-5000" },
+                { min: 5001, max: 10000, label: "5001-10000" },
+                { min: 10001, max: Infinity, label: "10001+" }
+            ];
+
+            const balanceDistribution = balanceRanges.map(range => ({
+                label: range.label,
+                count: users.filter(user => user.balance >= range.min && user.balance <= range.max).length
+            }));
+
+            const rankDistribution = Object.entries(
+                users.reduce((acc, user) => {
+                    acc[user.rank] = (acc[user.rank] || 0) + 1;
+                    return acc;
+                }, {})
+            ).sort((a, b) => b[1] - a[1]);
+
+            new Chart(document.getElementById('balanceDistributionChart'), {
+                type: 'bar',
+                data: {
+                    labels: balanceDistribution.map(d => d.label),
+                    datasets: [{
+                        label: 'Usuarios por rango de balance',
+                        data: balanceDistribution.map(d => d.count),
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { position: 'top' },
+                        title: { display: true, text: 'Distribución de Balances' }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('rankDistributionChart'), {
+                type: 'pie',
+                data: {
+                    labels: rankDistribution.map(d => d[0]),
+                    datasets: [{
+                        data: rankDistribution.map(d => d[1]),
+                        backgroundColor: [
+                            '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
+                            '#FF9F40', '#FF6384', '#C9CBCF', '#4BC0C0', '#FF6384'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { position: 'right' },
+                        title: { display: true, text: 'Distribución de Rangos' }
+                    }
+                }
+            });
+        }
+
+        loadUsers();
+        document.getElementById("currencySelect").addEventListener("change", updateUserList);
+        document.getElementById("searchInput").addEventListener("input", updateUserList);
+        document.getElementById("sortSelect").addEventListener("change", updateUserList);
     </script>
-  </body>
+</body>
 </html>

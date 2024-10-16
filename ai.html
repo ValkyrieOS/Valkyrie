@@ -4,26 +4,43 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Library - Valkyrie</title>
+    <title>AI Nexus - Discover AI Tools</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
         .tool-card {
             transition: all 0.3s ease;
-            content-visibility: auto;
         }
 
         .tool-card:hover {
-            background-color: #2A2A2A;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
         }
 
-        .filter-button {
-            transition: all 0.3s ease;
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
-        .filter-button:hover {
-            transform: scale(1.05);
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #555;
         }
     </style>
     <script>
@@ -31,14 +48,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#8B5CF6",
-                        secondary: "#EC4899",
-                        tertiary: "#10B981",
-                        dark: {
-                            100: "#121212",
-                            200: "#1E1E1E",
-                            300: "#2A2A2A",
-                        },
+                        primary: "#667eea",
+                        secondary: "#764ba2",
                     },
                 },
             },
@@ -46,38 +57,41 @@
     </script>
 </head>
 
-<body class="bg-dark-100 text-gray-200 min-h-screen flex flex-col transition-colors duration-200">
-    <header class="bg-dark-200 text-white shadow-lg sticky top-0 z-50">
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col transition-colors duration-200 custom-scrollbar">
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center space-x-4 mb-4 md:mb-0">
-                    <h1 class="text-4xl font-bold text-primary">AI Library</h1>
-                    <span class="text-sm font-medium bg-dark-300 text-primary px-2 py-1 rounded-full">v1.2.1</span>
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-3xl font-bold text-primary">AI Nexus</h1>
+                    <span class="text-sm font-medium bg-secondary text-white px-2 py-1 rounded-full">Beta</span>
                 </div>
                 <div class="flex items-center space-x-4">
                     <div class="relative">
                         <input type="text" id="search" placeholder="Search AI tools..."
-                            class="w-full md:w-64 px-4 py-2 pl-10 rounded-full bg-dark-300 text-white focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200" />
+                            class="w-64 px-4 py-2 pl-10 rounded-full bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200" />
                         <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
                     </div>
+                    <button id="theme-toggle" class="text-gray-600 hover:text-primary transition-colors">
+                        <i class="fas fa-sun"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
 
-    <nav class="bg-dark-200 shadow-md py-4 sticky top-16 z-40">
+    <nav class="bg-white shadow-sm py-4 sticky top-16 z-40">
         <div class="container mx-auto px-4">
             <div class="flex justify-center space-x-2">
                 <button id="all-filter"
-                    class="filter-button px-6 py-2 rounded-full bg-primary text-white font-medium hover:bg-opacity-90 transition-colors">
+                    class="px-6 py-2 rounded-full bg-primary text-white font-medium hover:bg-opacity-90 transition-colors">
                     All
                 </button>
                 <button id="free-filter"
-                    class="filter-button px-6 py-2 rounded-full bg-secondary text-white font-medium hover:bg-opacity-90 transition-colors">
+                    class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-gray-300 transition-colors">
                     Free
                 </button>
                 <button id="paid-filter"
-                    class="filter-button px-6 py-2 rounded-full bg-tertiary text-white font-medium hover:bg-opacity-90 transition-colors">
+                    class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-gray-300 transition-colors">
                     Paid
                 </button>
             </div>
@@ -85,15 +99,23 @@
     </nav>
 
     <main class="flex-grow container mx-auto px-4 py-8">
-        <div id="ai-tools-count" class="text-center mb-6 text-lg font-medium text-gray-400"></div>
+        <div id="ai-tools-count" class="text-center mb-6 text-lg font-medium text-gray-600"></div>
         <div id="ai-tools" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <!-- AI tools will be dynamically inserted here -->
         </div>
     </main>
 
-    <footer class="bg-dark-200 text-white py-8 text-center">
-        <p>&copy; 2024 Valkyrie. All rights reserved.</p>
-        <p class="mt-2 text-gray-400">Made with ♥️ by Valkyrie</p>
+    <footer class="bg-white text-gray-600 py-8">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2024 AI Nexus. All rights reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
 
     <script>
@@ -108,23 +130,23 @@
 
             tools.forEach((tool) => {
                 const toolElement = document.createElement("div");
-                toolElement.className = "tool-card bg-dark-200 rounded-lg overflow-hidden shadow-lg border border-dark-300";
+                toolElement.className = "tool-card bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl";
                 toolElement.innerHTML = `
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
-                            <h2 class="text-2xl font-bold text-primary">${tool.name}</h2>
+                            <h2 class="text-xl font-bold text-gray-800">${tool.name}</h2>
                             <span class="px-3 py-1 rounded-full text-xs font-semibold ${getPricingClass(tool)}">
                                 ${getPricingLabel(tool)}
                             </span>
                         </div>
-                        <p class="text-gray-300 text-sm mb-4">${tool.description}</p>
+                        <p class="text-gray-600 text-sm mb-4">${tool.description}</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            ${tool.tags.map(tag => `<span class="bg-dark-300 text-gray-300 text-xs px-2 py-1 rounded-full">${tag}</span>`).join('')}
+                            ${tool.tags.map(tag => `<span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full">${tag}</span>`).join('')}
                         </div>
                         ${renderOperatingSystems(tool)}
                         <div class="flex justify-end items-center mt-4">
                             <a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-primary hover:bg-opacity-90 text-white text-sm rounded-full transition-colors">
-                                Visit <i class="fas fa-external-link-alt ml-2"></i>
+                                Explore <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
                     </div>
@@ -138,25 +160,21 @@
                 return '';
             }
 
-            if (tool.operatingSystems.length === 1) {
-                return `<p class="text-gray-400 text-sm mb-4"><i class="fas fa-desktop mr-2"></i>${tool.operatingSystems[0]} only</p>`;
-            }
-
             return `
                 <div class="mb-4">
-                    <p class="text-gray-400 text-sm mb-2"><i class="fas fa-desktop mr-2"></i>Operating Systems:</p>
+                    <p class="text-gray-600 text-sm mb-2"><i class="fas fa-desktop mr-2"></i>Platforms:</p>
                     <div class="flex flex-wrap gap-2">
-                        ${tool.operatingSystems.map(os => `<span class="bg-dark-300 text-gray-300 text-xs px-2 py-1 rounded-full">${os}</span>`).join('')}
+                        ${tool.operatingSystems.map(os => `<span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full">${os}</span>`).join('')}
                     </div>
                 </div>
             `;
         }
 
         function getPricingClass(tool) {
-            if (tool.isPaid) return "bg-secondary text-white";
-            if (tool.isFreemium) return "bg-tertiary text-white";
-            if (tool.isOpenSource) return "bg-purple-500 text-white";
-            return "bg-green-500 text-white";
+            if (tool.isPaid) return "bg-red-500 text-white";
+            if (tool.isFreemium) return "bg-yellow-500 text-white";
+            if (tool.isOpenSource) return "bg-green-500 text-white";
+            return "bg-blue-500 text-white";
         }
 
         function getPricingLabel(tool) {
@@ -185,9 +203,12 @@
         function setActiveFilter(filter) {
             currentFilter = filter;
             document.querySelectorAll('nav button').forEach(btn => {
-                btn.classList.remove('bg-opacity-90');
+                btn.classList.remove('bg-primary', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
             });
-            document.getElementById(`${filter}-filter`).classList.add('bg-opacity-90');
+            const activeBtn = document.getElementById(`${filter}-filter`);
+            activeBtn.classList.remove('bg-gray-200', 'text-gray-700');
+            activeBtn.classList.add('bg-primary', 'text-white');
             filterTools();
         }
 
@@ -195,6 +216,32 @@
         document.getElementById("all-filter").addEventListener("click", () => setActiveFilter('all'));
         document.getElementById("free-filter").addEventListener("click", () => setActiveFilter('free'));
         document.getElementById("paid-filter").addEventListener("click", () => setActiveFilter('paid'));
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const icon = themeToggle.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+            updateTheme();
+        });
+
+        function updateTheme() {
+            const isDark = document.body.classList.contains('dark');
+            document.body.style.backgroundColor = isDark ? '#1a202c' : '#f7fafc';
+            document.body.style.color = isDark ? '#e2e8f0' : '#1a202c';
+            document.querySelectorAll('.bg-white').forEach(el => {
+                el.classList.toggle('bg-gray-800');
+                el.classList.toggle('text-white');
+            });
+            document.querySelectorAll('.text-gray-600, .text-gray-700, .text-gray-800').forEach(el => {
+                el.classList.toggle('text-gray-300');
+            });
+            document.querySelectorAll('.bg-gray-100, .bg-gray-200').forEach(el => {
+                el.classList.toggle('bg-gray-700');
+            });
+        }
 
         fetch("data/ai-tools.json")
             .then((response) => response.json())
