@@ -34,7 +34,6 @@
       >
         Valkyrie Fusions
       </h1>
-
       <div class="bg-gray-800 rounded-lg shadow-xl p-8">
         <form id="fusionForm" class="space-y-6">
           <div>
@@ -79,14 +78,12 @@
             Conseguir oferta
           </button>
         </form>
-
         <div id="loadingIndicator" class="hidden mt-8 text-center">
           <div
             class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-valk-purple border-r-transparent align-[-0.125em]"
           ></div>
           <p class="mt-2 text-valk-purple">Calculando oferta...</p>
         </div>
-
         <div id="offerResult" class="hidden mt-8 p-4 bg-gray-700 rounded-md">
           <p class="text-valk-blue font-semibold">
             Tu oferta es de <span id="offerAmount"></span> valcoins
@@ -94,7 +91,6 @@
         </div>
       </div>
     </div>
-
     <script>
       document
         .getElementById("fusionForm")
@@ -104,12 +100,10 @@
           const memberCount = parseInt(
             document.getElementById("memberCount").value
           );
-
           document
             .getElementById("loadingIndicator")
             .classList.remove("hidden");
           document.getElementById("offerResult").classList.add("hidden");
-
           setTimeout(() => {
             let valcoinsPerMember = 0;
             switch (fusionType) {
@@ -124,7 +118,6 @@
                 break;
             }
             const offer = valcoinsPerMember * memberCount;
-
             document.getElementById("loadingIndicator").classList.add("hidden");
             document.getElementById("offerResult").classList.remove("hidden");
             document.getElementById("offerAmount").textContent = offer;
