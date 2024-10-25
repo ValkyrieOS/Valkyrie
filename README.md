@@ -1,6 +1,6 @@
 <p align="center"><img src="https://socialify.git.ci/Glazzier/Valkyrie/image?description=1&amp;forks=1&amp;issues=1&amp;language=1&amp;name=1&amp;owner=1&amp;pulls=1&amp;stargazers=1&amp;theme=Auto" alt="project-image"></p>
 
-<p align="center"><img src="https://img.shields.io/github/repo-size/Glazzier/Valkyrie" alt="shields"><img src="https://img.shields.io/badge/actual_version-1.3.0-lima" alt="shields"></p>
+<p align="center"><img src="https://img.shields.io/github/repo-size/Glazzier/Valkyrie" alt="shields"><img src="https://img.shields.io/badge/actual_version-2.0.0-gold" alt="shields"></p>
 
 <h2>🚀 Demo</h2>
 
